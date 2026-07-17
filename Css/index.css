@@ -75,6 +75,7 @@ p{
     gap: 20px; 
     padding: 40px;
     width: auto;
+    justify-items: center;
 }
 
 .tarjeta{
@@ -115,7 +116,34 @@ p{
     width: 25px;
 }
 
+.menu_lateral{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 384px;
+    background: rgb(44, 44, 44);
+    transform: translateX(-100%); /* lo esconde corriéndolo fuera de pantalla */
+    transition: transform 0.3s ease;
+    z-index: 20;
+}
 
+.menu_lateral.abierto {
+    transform: translateX(0); /* lo trae de vuelta a la vista */
+}
+
+.menu_lateral div{
+    text-align: initial;
+    padding: 15px;
+}
+
+.menu_lateral button{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
 
 @media (max-width: 384px) {
     .contenido {
