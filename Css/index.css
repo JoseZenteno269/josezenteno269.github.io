@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    line-height: 1.5;
+    background-color: rgb(179, 179, 179)
+}
+
+.panel {
+    margin: 0;
+    height: auto;
+    padding: 15px;
+    text-align: initial;
+    gap: 12px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.panel button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.panel span {
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+#main{
+    padding: 20px;
+    text-align: initial;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.iconos{
+    width: 60px;
+    height: 60px;
+}
+
+.imagen{
+    padding: 0;
+    width: 339px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.centro{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; 
+    padding: 40px;
+    width: auto;
+}
+
+.tarjeta{
+    width: 340px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.contenido-proyectos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    padding: 0px;
+    width: auto;
+}
+
+.tags{
+    padding: 10px;
+    width: auto;
+    height: auto;
+    background-color: blue;
+    color: cornflowerblue;
+    border-radius: 8px;
+}
+
+.codigo{
+    padding: 10px;
+    font-size: 18px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.imagen-contacto{
+    width: 25px;
+}
+
+
+
+@media (max-width: 384px) {
+    .contenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 384px) {
+    .contenido-proyectos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
