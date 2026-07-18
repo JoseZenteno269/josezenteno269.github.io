@@ -4,17 +4,21 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #222;
     line-height: 1.5;
-    background-color: rgb(179, 179, 179)
+    background-color: rgb(179, 179, 179); 
 }
 
 .panel {
     margin: 0;
     height: auto;
-    padding: 15px;
+    padding: 25px;
     text-align: initial;
     gap: 12px;
     background-color: rgb(44, 44, 44);
@@ -35,8 +39,14 @@ body {
 }
 
 #main{
+    margin-top: 15px;
     padding: 20px;
     text-align: initial;
+}
+
+#main #seccion1 h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 80px
 }
 
 h2{
@@ -52,8 +62,8 @@ p{
 }
 
 .iconos{
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
 }
 
 .imagen{
@@ -77,6 +87,16 @@ p{
     padding: 40px;
     width: auto;
     justify-items: center;
+}
+
+.contenido div{
+    border: 1px solid #cccc;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.contenido p{
+    font-size: 15px;
 }
 
 .tarjeta{
@@ -114,6 +134,38 @@ p{
     border-radius: 10px;
 }
 
+.contacto{
+    text-align: center;
+    justify-items: center;
+    border: 1px solid #cccc;
+    border-radius: 30px;
+    padding: 40px 20px 40px 20px; 
+}
+
+.contacto h2{
+    margin-bottom: 40px;
+}
+
+.contacto p{
+    border: 1px solid #cccc; 
+    border-radius: 15px;
+    padding: 20px;
+    width: 180px;
+    margin-bottom: 20px;
+    background-color: rgb(58, 58, 58);
+    text-align: center;
+}
+
+.contacto a{
+    color: white;
+    text-decoration: none;
+}
+
+.contacto img{
+    margin-right: 15px;
+    text-align: center;
+}
+
 .imagen-contacto{
     width: 25px;
 }
@@ -136,7 +188,7 @@ p{
 
 .menu_lateral div{
     text-align: initial;
-    padding: 15px;
+    padding: 25px;
 }
 
 .menu_lateral button{
@@ -145,6 +197,15 @@ p{
     color: white;
     font-size: 22px;
     cursor: pointer;
+}
+
+.menu_lateral p{
+    margin: 40px;
+}
+
+.menu_lateral a{
+    text-decoration: none;
+    color: white;
 }
 
 .footer{
