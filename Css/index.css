@@ -16,6 +16,8 @@
     --color-sombras: #005e5e;
     --color-tags: #00416da8;
     --color-hover: #002736;
+    --color-hover-links: #331cffd5;
+    --color-hover-tarjetas-cursos: #3c6372;
 }
 
 @font-face {
@@ -33,7 +35,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--color-texto);
     line-height: 1.5;
-    background: radial-gradient(circle at 70% 25%, #0078782e, transparent 45%), radial-gradient(circle at 40% 80%, #0078782e, transparent 45%), #0B1120;
+    background: radial-gradient(circle at 70% 25%, #0078782e, transparent 45%), radial-gradient(circle at 20% 80%, #0078782e, transparent 45%), #0B1120;
 }
 
 .panel {
@@ -47,7 +49,7 @@ body {
     text-align: initial;
     gap: 12px;
     color: var(--color-texto);
-    z-index: 1000; 
+    z-index: 1000;
     background: var(--color-fondo);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -68,13 +70,13 @@ body {
     padding-left: 10px;
 }
 
-.panel .links a{
+.panel .links a {
     transition: 0.15s;
     color: var(--color-texto-primario)
 }
 
-.panel .links a:hover{
-    color: white; 
+.panel .links a:hover {
+    color: white;
 }
 
 .links {
@@ -97,8 +99,8 @@ body {
     font-size: 50px;
 }
 
-#main #seccion1 h2 span{
-    background: linear-gradient(90deg, #48dbfb, var(--color-texto-primario),#48dbfb);
+#main #seccion1 h2 span {
+    background: linear-gradient(90deg, #48dbfb, var(--color-texto-primario), #48dbfb);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -146,7 +148,7 @@ h4 {
     max-height: 70px;
     font-size: 23px;
     margin-bottom: 30px;
-}
+} 
 
 p {
     font-size: 17px;
@@ -169,6 +171,15 @@ b {
     max-width: 340px;
     height: 100%;
     max-height: 180px;
+    border-radius: 10px;
+}
+
+.imagen_cursos {
+    padding: 0;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    max-height: 150px;
     border-radius: 10px;
 }
 
@@ -197,13 +208,13 @@ b {
     max-width: 100px;
     height: 100%;
     max-height: 100px;
-    transition: 0.20s;
+    transition: 0.25s;
 }
 
 .contenido div:hover {
     background-color: var(--color-hover);
     box-shadow: 1px 1px 10px var(--color-sombras);
-    transform: translateY(-5px);    
+    transform: translateY(-5px);
 }
 
 .contenido p {
@@ -213,6 +224,7 @@ b {
 
 
 .tarjeta {
+    margin-top: 50px;
     max-width: 340px;
     width: 100%;
     height: 540px;
@@ -243,6 +255,71 @@ b {
     align-items: flex-end;
 }
 
+.tarjeta_cursos {
+    margin-top: 50px;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding-bottom: 30px;
+    transition: 0.25s;
+}
+
+.tarjeta_cursos:hover {
+    background-color: var(--color-hover);
+    box-shadow: 0px 5px 30px #0078782e;
+    transform: translateY(-5px);
+}
+
+.tarjeta_cursos h5{
+    text-align: center;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.tarjeta_cursos h6{
+    text-align: center;
+    width: auto; 
+    height: auto;
+    font-size: 15px;
+    margin: 10px; 
+}
+
+.tarjeta_cursos p {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.tarjeta_cursos a {
+    text-decoration: none; 
+    font-size: 15px;
+    color: var(--color-texto);
+    align-items: flex-end; 
+    transition: 0.2s;
+}
+
+.tarjeta_cursos a:hover {
+    color: var(--color-hover-links);
+}
+
+.tarjeta_cursos .link_certificado {
+    text-decoration: none; 
+    font-size: 15px;
+    color: var(--color-texto);
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-end;
+    justify-items: flex-end;
+    background-color: var(--color-panel); 
+    padding: 10px 40px 10px 40px; 
+    border-radius: 10px;
+}
+
 .codigo {
     padding: 10px;
     font-size: 18px;
@@ -263,6 +340,19 @@ b {
     margin-bottom: 30px;
 }
 
+.contenido-cursos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 70px;
+    padding: 0px;
+    width: auto;
+}
+
+.contenido-cursos p {
+    margin-bottom: 30px;
+}
+
 .tags {
     padding: 10px;
     width: auto;
@@ -273,6 +363,7 @@ b {
 }
 
 .contacto {
+    margin-top: 180px;
     text-align: center;
     justify-items: center;
     border: 1px solid var(--color-border);
@@ -300,7 +391,7 @@ b {
     transition: 0.20s;
 }
 
-.contacto a:hover{
+.contacto a:hover {
     background-color: var(--color-hover);
     box-shadow: 1px 1px 10px var(--color-sombras);
     transform: translateY(-5px);
@@ -388,7 +479,7 @@ b {
     font-size: 13px;
 }
 
-.foto_perfil{
+.foto_perfil {
     border: 4px solid var(--color-hover);
     border-radius: 50%;
     width: 140px;
@@ -397,7 +488,7 @@ b {
     box-shadow: 0px 5px 20px var(--color-sombras);
 }
 
-.descarga_cv{
+.descarga_cv {
     font-size: 15px;
     display: inline-block;
     text-decoration: none;
@@ -409,7 +500,7 @@ b {
     transition: 0.25s;
 }
 
-.descarga_cv:hover{
+.descarga_cv:hover {
     transform: translateY(-5px);
     box-shadow: 0px 0px 5px var(--color-sombras);
     background-color: var(--color-hover);
@@ -438,7 +529,11 @@ b {
 
     .contenido-proyectos {
         justify-items: center;
-        /* grid-template-columns: repeat(1, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contenido-cursos {
+        justify-items: center;
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -462,7 +557,7 @@ b {
         font-size: 80px;
     }
 
-    #main #seccion1 h2 span{
+    #main #seccion1 h2 span {
         font-size: 90px;
     }
 
@@ -480,11 +575,17 @@ b {
         /* grid-template-columns: repeat(4, 1fr); */
         /* grid-template-columns: repeat(2, 1fr); */
         grid-template-columns: repeat(2, minmax(auto, 1fr));
+        gap: 30px; 
     }
 
     .contenido-proyectos {
         justify-items: center;
         /* grid-template-columns: repeat(1, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contenido-cursos {
+        justify-items: center;
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -548,7 +649,7 @@ b {
         font-size: 90px;
     }
 
-    #main #seccion1 h2 span{
+    #main #seccion1 h2 span {
         font-size: 120px;
     }
 
@@ -564,8 +665,8 @@ b {
     .contenido {
         justify-items: center;
         /* grid-template-columns: repeat(4, 1fr); */
-        /* grid-template-columns: repeat(2, 1fr); */
-        grid-template-columns: repeat(3, minmax(auto, 1fr));
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
         gap: 50px;
     }
 
@@ -574,6 +675,11 @@ b {
         /* grid-template-columns: repeat(1, 1fr); */
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
+    }
+
+    .contenido-cursos {
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .contacto {
@@ -640,8 +746,8 @@ b {
         font-size: 100px;
     }
 
-    #main #seccion1 h2 span{
-        font-size: 120px; 
+    #main #seccion1 h2 span {
+        font-size: 120px;
     }
 
     #main #seccion2 {
