@@ -1,69 +1,44 @@
-# Perfil Profesional y Contexto del Desarrollador
+# Portafolio de José Zenteno
 
-## 👤 Datos Personales
-- **Nombre completo:** José Luis Zenteno Murillo
-- **Ubicación:** Buenos Aires / Zona Norte, Argentina
-- **Disponibilidad laboral:** Modalidades Remoto, Híbrido o Presencial
-- **Objetivo profesional:** Búsqueda activa de primer empleo IT como **Desarrollador Backend Junior / Trainee**
-- **GitHub:** [JoseZenteno269](https://github.com/JoseZenteno269)
-- **LinkedIn:** [José Zenteno](https://www.linkedin.com/in/jose-zenteno-357813235/)
-- **Email:** [zentenojose123456@gmail.com](mailto:zentenojose123456@gmail.com)
+Sitio personal: **[josezenteno.dev](https://josezenteno.dev)**
 
----
+Soy desarrollador backend en formación (C#, .NET y Java) y estudio la Tecnicatura Universitaria en Programación en la UTN FRGP. En el portafolio están mis proyectos, las tecnologías que uso, los cursos que hice y cómo contactarme.
 
-## 🎓 Formación Académica
-- **Carrera:** Tecnicatura Universitaria en Programación
-- **Institución:** Universidad Tecnológica Nacional (UTN) - Facultad Regional General Pacheco (FRGP)
-- **Estado actual:** Cursando activamente materias con enfoque en **Java** y bases de datos relacionales con **MySQL**.
-- **Antecedentes:** Técnico Electromecánico (secundario técnico) con experiencia laboral inicial en el área técnica/industrial.
-- **Experiencia técnica previa en IT:** Soporte técnico / Mesa de ayuda (Helpdesk).
+## Qué tiene
 
----
+- **Sobre mí**: de técnico electromecánico y soporte técnico a la programación.
+- **Proyectos en curso**: Sistema 3D, un sistema real de gestión para un negocio de impresión 3D que hacemos en equipo de 3 como [TechIntoBios](https://github.com/TechIntoBios) ([repo](https://github.com/TechIntoBios/Gestion-3D)), y Tienda Tecnológica 2.0 (Java con Spring Boot, de práctica).
+- **Proyectos terminados**: Tienda Tecnológica (API REST con ASP.NET Core, de práctica), Sistema de Gestión Clínica (ASP.NET Web Forms, en equipo) y Sistema de Gestión de Transporte (C++).
+- **Tecnologías**, agrupadas por categoría, con lo que todavía estoy practicando marcado.
+- **Cursos y certificados**, con link a cada certificado.
+- **Contacto**: mail, LinkedIn, GitHub e Instagram, y el CV para descargar.
 
-## 💻 Stack Técnico y Herramientas
+## Cómo está hecho
 
-### Backend & Lenguajes
-- **C# & .NET:** ASP.NET Core Web API, MVC, arquitectura en capas, POO, consumo y diseño de APIs REST. *(Formación autodidacta y proyectos prácticos)*
-- **C++:** Fundamentos sólidos de algoritmia, memoria y estructuras de datos dinámicas. *(Formación académica en UTN)*
-- **Java:** Programación orientada a objetos, colecciones y arquitectura. *(Formación académica actual en UTN)*
-- **Python:** Fundamentos, estructuras de datos, funciones y análisis con NumPy/Pandas. *(Capacitación en Talento Tech y DataCamp)*
+HTML, CSS y JavaScript, sin frameworks ni dependencias. Está publicado con GitHub Pages y dominio propio (`CNAME`).
 
-### Bases de Datos
-- **SQL Server:** Modelado de bases de datos relacionales, consultas complejas, procedimientos almacenados y transacciones.
-- **MySQL:** Modelado relacional, consultas, integridad referencial.
-- **SQLite:** Bases de datos livianas e integradas.
+```
+index.html          página principal
+404.html            página de error
+Css/index.css       estilos (tokens en :root, responsive de 320px a 1920px)
+JavaScript/index.js menú lateral, sección activa, aparición al scrollear
+Imagenes/web/       imágenes optimizadas en WebP que usa la página
+Imagenes/og-image.png  vista previa para LinkedIn y otras redes
+Archivos/           CV descargable
+iconos/, Fuentes/   íconos SVG y la fuente del logo
+```
 
-### Frontend Base & Complementario
-- **HTML5, CSS3, JavaScript:** Maquetación responsiva, manipulación del DOM, diseño fluido y estilos modernos con CSS Vanilla. *(Autodidacta)*
+## Correrlo en local
 
-### Herramientas y Entornos de Desarrollo
-- Visual Studio Community
-- Visual Studio Code
-- Eclipse IDE
-- Google Antigravity IDE
-- Git & GitHub (control de versiones y despliegues con GitHub Pages)
+Cualquier servidor estático sirve, por ejemplo:
 
----
+```bash
+python -m http.server 5501
+```
 
-## 🚀 Proyectos Destacados
+Y después se abre `http://localhost:5501`. En VS Code también funciona con Live Server (`.vscode/settings.json` usa el puerto 5501).
 
-1. **Tienda Tecnológica (E-Commerce Backend & Web):**
-   - Plataforma de ventas con catálogo filtrable por nombre y categoría.
-   - Carrito de compras con actualización dinámica de precios según cantidad y verificación de stock en tiempo real.
-   - Historial de órdenes con control de estados.
-   - *Tecnologías:* C#, ASP.NET Core, SQL Server, HTML5, CSS3, JavaScript.
+## Contacto
 
-2. **Sistema de Gestión Clínica:**
-   - Gestión integral de turnos médicos, pacientes, profesionales e informes.
-   - *Tecnologías:* C#, ASP.NET, SQL Server.
-
-3. **Sistema de Gestión de Transporte:**
-   - Administración de flota de vehículos, asignación de viajes y venta de pasajes.
-   - *Tecnologías:* C++, Estructuras de datos avanzadas.
-
----
-
-## 🗺️ Roadmap de Crecimiento Backend
-1. **Consolidado / En producción:** C# + .NET (Web API) + SQL Server.
-2. **Siguiente paso web backend:** Java + Spring Boot + MySQL.
-3. **Siguiente iteración:** Python (FastAPI / Flask) + MongoDB (NoSQL).
+- LinkedIn: [José Zenteno](https://www.linkedin.com/in/jose-zenteno-357813235/)
+- GitHub: [JoseZenteno269](https://github.com/JoseZenteno269)

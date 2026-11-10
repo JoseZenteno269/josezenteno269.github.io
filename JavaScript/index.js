@@ -1,4 +1,4 @@
-// ---------- Menú lateral ----------
+
 const btnMenu = document.getElementById("btn_menu");
 const btnCerrar = document.getElementById("btn_cerrar");
 const menu = document.getElementById("menu_lateral");
@@ -7,7 +7,7 @@ const overlay = document.getElementById("overlay");
 function abrirMenu() {
     menu.classList.add("abierto");
     overlay.classList.add("activo");
-    document.body.classList.add("sin-scroll");
+    document.documentElement.classList.add("sin-scroll");
     menu.setAttribute("aria-hidden", "false");
     btnMenu.setAttribute("aria-expanded", "true");
     btnCerrar.focus();
@@ -17,7 +17,7 @@ function cerrarMenu() {
     if (!menu.classList.contains("abierto")) return;
     menu.classList.remove("abierto");
     overlay.classList.remove("activo");
-    document.body.classList.remove("sin-scroll");
+    document.documentElement.classList.remove("sin-scroll");
     menu.setAttribute("aria-hidden", "true");
     btnMenu.setAttribute("aria-expanded", "false");
     btnMenu.focus({ preventScroll: true });
@@ -32,12 +32,10 @@ document.addEventListener("keydown", e => {
     if (e.key === "Escape") cerrarMenu();
 });
 
-// Si la ventana pasa a tamaño escritorio con el menú abierto, se cierra.
 window.matchMedia("(min-width: 992px)").addEventListener("change", e => {
     if (e.matches) cerrarMenu();
 });
 
-// ---------- Aparición de secciones al scrollear ----------
 const revelables = document.querySelectorAll(".revelar");
 
 if ("IntersectionObserver" in window) {
@@ -55,11 +53,12 @@ if ("IntersectionObserver" in window) {
     revelables.forEach(el => el.classList.add("visible"));
 }
 
-// ---------- Sección activa en el menú de escritorio ----------
 const linksNav = document.querySelectorAll(".links a[href^='#']");
 const secciones = [...linksNav]
     .map(link => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);
+const inicio = document.getElementById("inicio");
+if (inicio) secciones.push(inicio);
 
 if ("IntersectionObserver" in window && secciones.length) {
     const observadorNav = new IntersectionObserver(entradas => {
@@ -74,6 +73,5 @@ if ("IntersectionObserver" in window && secciones.length) {
     secciones.forEach(sec => observadorNav.observe(sec));
 }
 
-// ---------- Año del footer ----------
 const anio = document.getElementById("anio");
 if (anio) anio.textContent = new Date().getFullYear();
