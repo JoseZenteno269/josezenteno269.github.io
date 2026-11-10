@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada | José Zenteno</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/iconos/Logo.svg" type="image/svg+xml">
+    <link href="/Css/index.css" rel="stylesheet">
+    <style>
+        .error {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .error .codigo-error {
+            font-family: "ROG Fonts", sans-serif;
+            font-size: clamp(64px, 16vw, 140px);
+            line-height: 1;
+            background: linear-gradient(90deg, var(--color-celeste), var(--color-turquesa), var(--color-violeta));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .error p {
+            color: var(--color-texto-suave);
+            max-width: 420px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="error">
+        <p class="codigo-error">404</p>
+        <h1>Esta página no existe</h1>
+        <p>Puede que el link esté mal escrito o que la página se haya movido.</p>
+        <a href="/" class="boton boton-principal">Volver al inicio</a>
+    </main>
+</body>
+
+</html>
