@@ -11,7 +11,6 @@
     <meta name="theme-color" content="#0B1120">
     <link rel="canonical" href="https://josezenteno.dev/">
 
-    <!-- Open Graph (vista previa en LinkedIn, WhatsApp, etc.) -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
     <meta property="og:site_name" content="José Zenteno">
@@ -40,8 +39,7 @@
         <a href="#inicio" class="marca" aria-label="José Zenteno, volver al inicio">JZ</a>
         <nav class="links" aria-label="Principal">
             <a href="#sobre-mi">Sobre mí</a>
-            <a href="#sistema3d">Proyecto actual</a>
-            <a href="#proyectos">Proyectos</a>
+                        <a href="#proyectos">Proyectos</a>
             <a href="#tecnologias">Tecnologías</a>
             <a href="#certificados">Certificados</a>
             <a href="#contacto">Contacto</a>
@@ -58,12 +56,11 @@
             <button id="btn_cerrar" aria-label="Cerrar menú">✕</button>
         </div>
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#sistema3d">Proyecto actual</a>
-        <a href="#proyectos">Proyectos</a>
+                <a href="#proyectos">Proyectos</a>
         <a href="#tecnologias">Tecnologías</a>
         <a href="#certificados">Certificados</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
 
     <div id="overlay" class="overlay"></div>
@@ -73,29 +70,28 @@
         <!-- INICIO -->
         <section id="inicio" class="hero">
             <div class="hero-texto">
-                <p class="estado"><span class="punto" aria-hidden="true"></span>Buscando mi primer empleo IT · Zona
-                    Norte, Buenos Aires</p>
+                <p class="estado">Buscando mi primer empleo IT en Zona Norte, Buenos Aires</p>
                 <h1>
                     <span class="sr-only">Hola, soy José Zenteno</span>
                     <span aria-hidden="true">Hola, soy <br><span class="nombre">Jos<span class="tilde">e</span>
                             Zenteno</span></span>
                 </h1>
-                <p class="hero-rol">Desarrollador backend en formación · C# / .NET y Java</p>
+                <p class="hero-rol">Desarrollador backend en formación, con C# / .NET y Java</p>
                 <p class="hero-intro">
-                    Estudio la <b>Tecnicatura Universitaria en Programación</b> en la UTN FRGP. Me enfoco en el
-                    backend: APIs REST con <b>ASP.NET Core</b>, acceso a datos con <b>ADO.NET</b> y bases
-                    relacionales como <b>SQL Server</b>, <b>MySQL</b> y <b>PostgreSQL</b>. Busco un puesto
-                    <b>Backend Junior o Trainee</b>, remoto, híbrido o presencial.
+                    Estudio la Tecnicatura Universitaria en Programación en la UTN FRGP. Me enfoco en el
+                    backend: APIs REST con ASP.NET Core, acceso a datos con ADO.NET y bases relacionales como
+                    SQL Server, MySQL y PostgreSQL. Busco un puesto
+                    <b class="resalte">Backend Junior o Trainee</b>, remoto, híbrido o presencial.
                 </p>
                 <div class="hero-acciones">
                     <a href="Archivos/CV_Jose_Zenteno.pdf" download="CV_Jose_Zenteno.pdf"
                         class="boton boton-principal">Descargar CV</a>
                     <a href="#proyectos" class="boton">Ver proyectos</a>
-                    <a href="#contacto" class="boton boton-texto">Contactarme →</a>
+                    <a href="#contacto" class="boton boton-texto">Contactarme</a>
                 </div>
-                <a href="#sistema3d" class="ahora">
+                <a href="#en-curso" class="ahora">
                     <span class="ahora-etiqueta">Ahora</span>
-                    Armando un sistema de gestión para un negocio de impresión 3D, en equipo de 3
+                    Desarrollando con mi equipo un sistema real para un negocio de impresión 3D. En paralelo, practico Java con Spring Boot.
                 </a>
             </div>
             <div class="hero-foto">
@@ -137,70 +133,78 @@
             </div>
         </section>
 
-        <!-- PROYECTO ACTUAL: SISTEMA 3D -->
-        <section id="sistema3d" class="seccion revelar">
-            <h2>En qué estoy trabajando</h2>
-            <article class="destacado">
-                <div class="destacado-visual" aria-hidden="true">
-                    <svg viewBox="0 0 200 200" class="cubo">
-                        <defs>
-                            <linearGradient id="cara1" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#22d3ee" />
-                                <stop offset="1" stop-color="#335cb4" />
-                            </linearGradient>
-                            <linearGradient id="cara2" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#155e88" />
-                                <stop offset="1" stop-color="#08183f" />
-                            </linearGradient>
-                        </defs>
-                        <polygon points="100,28 166,64 100,100 34,64" fill="url(#cara1)" />
-                        <polygon points="34,64 100,100 100,172 34,136" fill="url(#cara2)" />
-                        <polygon points="166,64 100,100 100,172 166,136" fill="#0e3a5c" />
-                        <g stroke="#48dbfb" stroke-opacity=".35" stroke-width="1">
-                            <line x1="34" y1="88" x2="100" y2="124" />
-                            <line x1="34" y1="112" x2="100" y2="148" />
-                            <line x1="166" y1="88" x2="100" y2="124" />
-                            <line x1="166" y1="112" x2="100" y2="148" />
-                        </g>
-                    </svg>
-                </div>
-                <div class="destacado-texto">
-                    <p class="badge"><span class="punto" aria-hidden="true"></span>En desarrollo</p>
-                    <h3>Sistema 3D: gestión para un negocio de impresión 3D</h3>
-                    <p>
-                        Es un proyecto real: un sistema web para el negocio de impresión 3D de un amigo, que tiene que
-                        funcionar en el día a día. Los administradores cargan los productos por categoría y los ven en
-                        tarjetas. El cliente puede seguir el estado de su pedido, y va a haber una landing con los
-                        productos y un botón para mandar mensaje.
-                    </p>
-                    <p>
-                        En lo técnico, el backend es <b>asincrónico (async/await)</b>, con <b>ADO.NET</b> sobre
-                        <b>PostgreSQL</b> y acceso por token. En la facultad aprendí a programar de forma sincrónica;
-                        acá lo estoy haciendo asincrónico.
-                    </p>
-                    <p class="pendiente"><b>Lo que falta:</b> la baja de productos y evitar que se carguen
-                        duplicados.</p>
-                    <div class="tarjeta-tags">
-                        <span class="tags">C#</span>
-                        <span class="tags">.NET</span>
-                        <span class="tags">ADO.NET</span>
-                        <span class="tags">PostgreSQL</span>
-                        <span class="tags">async/await</span>
-                        <span class="tags">Auth por token</span>
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="seccion revelar">
+            <h2>Proyectos</h2>
+
+            <h3 id="en-curso" class="grupo-titulo">En curso</h3>
+            <div class="contenido-proyectos en-curso">
+                <article class="tarjeta">
+                    <img src="Imagenes/web/sistema-3d.webp" class="imagen"
+                        alt="Landing de ZUNOX 3D con el catálogo y, al lado, el código del login en C#" width="1000"
+                        height="555" loading="lazy">
+                    <div class="tarjeta-cuerpo">
+                        <p class="tarjeta-tipo">Proyecto real, en equipo</p>
+                        <h4>Sistema 3D</h4>
+                        <p>
+                            Sistema web de gestión para ZUNOX 3D, el negocio de impresión 3D de un amigo, que lo va a usar en
+                            el día a día. Lo hacemos <b>en equipo de tres</b>, como TechIntoBios. Los administradores
+                            cargan productos por categoría y arman los pedidos, el cliente sigue el estado de su
+                            pedido y la landing muestra el catálogo con un botón para consultar por WhatsApp.
+                        </p>
+                        <p>
+                            La API es asincrónica (async/await), con ADO.NET sobre PostgreSQL, login con JWT en
+                            cookie, contraseñas con BCrypt y límite de intentos. En la facultad aprendí a programar
+                            de forma sincrónica; acá lo hago asincrónico.
+                        </p>
+                        <p class="pendiente"><b>Lo que falta:</b> la baja de productos y evitar duplicados.</p>
+                        <div class="tarjeta-tags">
+                            <span class="tags">C#</span>
+                            <span class="tags">.NET</span>
+                            <span class="tags">PostgreSQL</span>
+                            <span class="tags">JWT</span>
+                        </div>
+                        <a class="codigo" href="https://github.com/TechIntoBios/Gestion-3D" target="_blank"
+                            rel="noopener noreferrer">Ver código</a>
                     </div>
-                    <!-- Cuando esté el link del repositorio, descomentar:
-                    <a class="boton boton-principal" href="URL_DEL_REPO" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
-                    -->
-                </div>
-            </article>
+                </article>
+                <article class="tarjeta">
+                    <img src="Imagenes/web/tienda-tecnologica-2.webp" class="imagen"
+                        alt="Formulario para agregar productos de la Tienda Tecnológica 2.0 y el controlador en Java"
+                        width="1000" height="610" loading="lazy">
+                    <div class="tarjeta-cuerpo">
+                        <p class="tarjeta-tipo">Práctica personal</p>
+                        <h4>Tienda Tecnológica 2.0</h4>
+                        <p>
+                            Estoy rehaciendo la Tienda Tecnológica en <b>Java con Spring Boot</b>
+                            para aprender el stack haciendo algo que ya conozco. Mantiene la idea de catálogo,
+                            carrito y compras.
+                        </p>
+                        <p>
+                            API en capas (Controllers, DTOs, Negocio, DAO y Entidades), JDBC con procedimientos
+                            almacenados en MySQL y documentación con Swagger. El frontend es HTML, CSS y JavaScript.
+                        </p>
+                        <div class="tarjeta-tags">
+                            <span class="tags">Java</span>
+                            <span class="tags">Spring Boot</span>
+                            <span class="tags">MySQL</span>
+                            <span class="tags">Swagger</span>
+                        </div>
+                        <a class="codigo" href="https://github.com/JoseZenteno269/Tienda_Tecnologica_2.0"
+                            target="_blank" rel="noopener noreferrer">Ver código</a>
+                    </div>
+                </article>
+            </div>
 
             <div class="equipo">
                 <div>
-                    <h3>Trabajamos en equipo</h3>
+                    <h4>Trabajamos en equipo: TechIntoBios</h4>
                     <p>
                         Somos tres programadores que nos juntamos para crecer como grupo de desarrollo: armar
                         programas que le resuelvan un problema concreto a una persona o a un negocio, con los
-                        lenguajes que manejamos. El Sistema 3D es el primero.
+                        lenguajes que manejamos. El Sistema 3D es el primero. El código está en
+                        <a href="https://github.com/TechIntoBios" target="_blank" rel="noopener noreferrer">nuestro
+                            GitHub</a>.
                     </p>
                     <p>
                         <b>Estamos buscando clientes.</b> Si tenés un negocio y algo que se pueda resolver con un
@@ -211,17 +215,15 @@
                     class="boton boton-principal">Contar mi proyecto</a>
                 <!-- Pasos de trabajo del equipo: se completan más adelante. -->
             </div>
-        </section>
 
-        <!-- PROYECTOS -->
-        <section id="proyectos" class="seccion revelar">
-            <h2>Proyectos</h2>
+            <h3 class="grupo-titulo">Terminados</h3>
             <div class="contenido-proyectos">
                 <article class="tarjeta">
                     <img src="Imagenes/web/tienda-tecnologica.webp" class="imagen"
                         alt="Pantalla del catálogo de la Tienda Tecnológica" width="800" height="467" loading="lazy">
                     <div class="tarjeta-cuerpo">
-                        <h3>Tienda Tecnológica</h3>
+                        <p class="tarjeta-tipo">Práctica personal</p>
+                        <h4>Tienda Tecnológica</h4>
                         <p>
                             E-commerce con catálogo que se filtra por nombre y categoría, carrito que recalcula el
                             precio según la cantidad e historial de órdenes con estados. Atrás hay una
@@ -231,19 +233,18 @@
                         <div class="tarjeta-tags">
                             <span class="tags">C#</span>
                             <span class="tags">ASP.NET Core Web API</span>
-                            <span class="tags">ADO.NET</span>
                             <span class="tags">SQL Server</span>
                             <span class="tags">JavaScript</span>
                         </div>
                         <a class="codigo" href="https://github.com/JoseZenteno269/Tienda_Tecnologica" target="_blank"
-                            rel="noopener noreferrer">Ver código ↗</a>
+                            rel="noopener noreferrer">Ver código</a>
                     </div>
                 </article>
                 <article class="tarjeta">
                     <img src="Imagenes/web/gestion-clinica.webp" class="imagen"
                         alt="Pantalla del Sistema de Gestión Clínica" width="800" height="391" loading="lazy">
                     <div class="tarjeta-cuerpo">
-                        <h3>Sistema de Gestión Clínica</h3>
+                        <h4>Sistema de Gestión Clínica</h4>
                         <p>
                             Sistema web de turnos médicos hecho <b>en equipo de dos</b>: login por roles, agenda por
                             profesional, gestión de pacientes y médicos, e informes. Armado en arquitectura de capas
@@ -252,11 +253,10 @@
                         <div class="tarjeta-tags">
                             <span class="tags">C#</span>
                             <span class="tags">ASP.NET Web Forms</span>
-                            <span class="tags">ADO.NET</span>
                             <span class="tags">SQL Server</span>
                         </div>
                         <a class="codigo" href="https://github.com/JoseZenteno269/PROYECTO-CLINICA" target="_blank"
-                            rel="noopener noreferrer">Ver código ↗</a>
+                            rel="noopener noreferrer">Ver código</a>
                     </div>
                 </article>
                 <article class="tarjeta">
@@ -264,7 +264,7 @@
                         alt="Menú de consola del Sistema de Gestión de Transporte" width="800" height="353"
                         loading="lazy">
                     <div class="tarjeta-cuerpo">
-                        <h3>Sistema de Gestión de Transporte</h3>
+                        <h4>Sistema de Gestión de Transporte</h4>
                         <p>
                             Sistema de consola para una empresa de micros: alta de vehículos, viajes, venta de pasajes
                             y reportes, con persistencia en archivos binarios. Lo hice en Programación II para
@@ -276,7 +276,7 @@
                             <span class="tags">Archivos binarios</span>
                         </div>
                         <a class="codigo" href="https://github.com/JoseZenteno269/SISTEMA-DE-GESTION-TRANSPORTE"
-                            target="_blank" rel="noopener noreferrer">Ver código ↗</a>
+                            target="_blank" rel="noopener noreferrer">Ver código</a>
                     </div>
                 </article>
             </div>
@@ -304,9 +304,11 @@
                     <h3>Backend</h3>
                     <ul class="lista-tec">
                         <li><img src="iconos/dotnet.svg" alt="" width="28" height="28">.NET / ASP.NET Core</li>
-                        <li><span class="icono-texto" aria-hidden="true">{ }</span>APIs REST</li>
-                        <li><span class="icono-texto" aria-hidden="true">DB</span>ADO.NET</li>
-                        <li><span class="icono-texto" aria-hidden="true">WF</span>ASP.NET Web Forms</li>
+                        <li><svg class="icono-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4c-2 0-3 1-3 3v2c0 1.5-1 3-2 3 1 0 2 1.5 2 3v2c0 2 1 3 3 3M16 4c2 0 3 1 3 3v2c0 1.5 1 3 2 3-1 0-2 1.5-2 3v2c0 2-1 3-3 3"/></svg>APIs REST</li>
+                        <li><img src="iconos/dotnet.svg" alt="" width="28" height="28">ADO.NET</li>
+                        <li><img src="iconos/dotnet.svg" alt="" width="28" height="28">ASP.NET Web Forms</li>
+                        <li><img src="iconos/spring.svg" alt="" width="28" height="28">Spring Boot <span
+                                class="nivel">en práctica</span></li>
                     </ul>
                 </div>
                 <div class="grupo">
@@ -361,7 +363,7 @@
                         introducción a SQLite, MySQL y NoSQL.
                     </p>
                     <a href="https://certificados.midudev.com/197b56ed-3218-4949-a4aa-ea53bae66f38.pdf" target="_blank"
-                        rel="noopener noreferrer" class="link_certificado">Ver certificado ↗</a>
+                        rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
                 </article>
                 <article class="tarjeta_cursos">
                     <a href="https://todocodeacademy.com/certificate/git-y-github-y5j/" target="_blank"
@@ -377,24 +379,24 @@
                         despliegue de proyectos.
                     </p>
                     <a href="https://todocodeacademy.com/certificate/git-y-github-y5j/" target="_blank"
-                        rel="noopener noreferrer" class="link_certificado">Ver certificado ↗</a>
+                        rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
                 </article>
                 <article class="tarjeta_cursos">
-                    <a href="https://certificados.thebigschool.com/wp-content/uploads/certs/MDEV4/Certificado-Jose-Zenteno-7r55ewub.pdf"
+                    <a href="Imagenes/Certificado%20-%20Desarrollo%20con%20IA.png"
                         target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
                         <img src="Imagenes/web/cert-ia.webp" class="imagen_cursos" alt="" width="560" height="432"
                             loading="lazy">
                     </a>
                     <h3>Desarrollo con IA</h3>
                     <p class="emisor"><a href="https://moure.dev/" target="_blank" rel="noopener noreferrer">MoureDev</a>
-                        · <a href="https://thebigschool.com/" target="_blank" rel="noopener noreferrer">BIG school</a>
+                        y <a href="https://thebigschool.com/" target="_blank" rel="noopener noreferrer">BIG school</a>
                     </p>
                     <p>
                         Programar con IA sin perder el control: planificar antes de escribir código, guiar a los
                         agentes paso a paso y mantener el proyecto ordenado.
                     </p>
-                    <a href="https://certificados.thebigschool.com/wp-content/uploads/certs/MDEV4/Certificado-Jose-Zenteno-7r55ewub.pdf"
-                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado ↗</a>
+                    <a href="Imagenes/Certificado%20-%20Desarrollo%20con%20IA.png"
+                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
                 </article>
                 <article class="tarjeta_cursos">
                     <a href="https://www.datacamp.com/statement-of-accomplishment/course/c87ba580e17914a9cec417075e1f404789fe5d83?raw=1"
@@ -410,7 +412,7 @@
                         NumPy.
                     </p>
                     <a href="https://www.datacamp.com/statement-of-accomplishment/course/c87ba580e17914a9cec417075e1f404789fe5d83?raw=1"
-                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado ↗</a>
+                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
                 </article>
                 <article class="tarjeta_cursos">
                     <a href="https://www.datacamp.com/statement-of-accomplishment/course/018446a93ee76c9e34c2c0053a95fcc5428732e3?raw=1"
@@ -426,7 +428,7 @@
                         trabajo.
                     </p>
                     <a href="https://www.datacamp.com/statement-of-accomplishment/course/018446a93ee76c9e34c2c0053a95fcc5428732e3?raw=1"
-                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado ↗</a>
+                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
                 </article>
                 <article class="tarjeta_cursos">
                     <a href="https://www.datacamp.com/statement-of-accomplishment/course/eaa8f4c76acb4ebf3fe1aee7a6ffa6c46d50e2f0?raw=1"
@@ -441,7 +443,7 @@
                         Funciones propias, módulos, paquetes, pandas, funciones lambda y manejo de errores.
                     </p>
                     <a href="https://www.datacamp.com/statement-of-accomplishment/course/eaa8f4c76acb4ebf3fe1aee7a6ffa6c46d50e2f0?raw=1"
-                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado ↗</a>
+                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
                 </article>
             </div>
         </section>
@@ -466,8 +468,8 @@
     </main>
 
     <footer class="footer">
-        <p>© <span id="anio">2026</span> · Desarrollado por <b>José Zenteno</b> con HTML, CSS y JavaScript</p>
-        <a href="#inicio">Volver arriba ↑</a>
+        <p>© <span id="anio">2026</span> José Zenteno. Lo empecé a mano con HTML, CSS y JavaScript y lo fui mejorando con el tiempo.</p>
+        <a href="#inicio">Volver arriba</a>
     </footer>
     <script src="JavaScript/index.js" defer></script>
 </body>
