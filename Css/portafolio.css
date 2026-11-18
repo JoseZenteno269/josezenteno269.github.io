@@ -1,0 +1,264 @@
+/* Secciones a la altura de su contenido (pedido de José, anula la regla de una pantalla por sección de la skill). Imágenes nunca más grandes que su archivo, cuatro esquinas redondeadas. */
+
+/* ---------------------------------------------------------------- tokens */
+:root {
+  --sec-pad: 120px;
+  --gutter: 48px;
+  --head-gap: 48px;
+  --col-gap: 48px;
+  --r-img: 10px;
+  --gut: var(--gutter);        /* el .wrap del kit lee --gut: nav, secciones y footer comparten borde */
+  --container: calc(1200px + 2 * var(--gutter));
+}
+@media (max-width: 1279px) { :root { --sec-pad: 96px; --gutter: 40px; --head-gap: 40px; --col-gap: 40px; } }
+@media (max-width: 1023px) { :root { --sec-pad: 80px; --gutter: 32px; --head-gap: 32px; --col-gap: 32px; } }
+@media (max-width: 639px)  { :root { --sec-pad: 64px; --gutter: 20px; --head-gap: 28px; --col-gap: 24px; } }
+@media (max-width: 359px)  { :root { --gutter: 16px; } }
+
+/* ---------------------------------------------------------------- .wrap: 1200px de contenido + gutters */
+.wrap, .container { width: min(100%, calc(1200px + 2 * var(--gutter))); padding-inline: var(--gutter); box-sizing: border-box; margin-inline: auto; }
+
+/* ---------------------------------------------------------------- alturas: a la altura del contenido */
+main > :is(section, .section):not(.hero, #forma),
+footer.closing {
+  height: auto; min-height: 0; display: block;
+  padding-block: var(--sec-pad);
+}
+main > :is(section, .section):not(.hero, #forma) > :is(.wrap, .container),
+footer.closing > .wrap {
+  height: auto; min-height: 0; flex: none; display: block;
+}
+main > :is(section, .section):not(.hero, #forma) > :is(.wrap, .container) > * { min-height: 0; }
+.section-head { margin-bottom: var(--head-gap); }
+footer.closing .section-head { margin-bottom: 0; }
+footer.closing > .wrap { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: var(--s-8); }
+
+/* #forma: igual que antes desde 1024; debajo, a la altura de su contenido */
+@media (max-width: 1023px) {
+  main > #forma {
+    height: auto; min-height: 0; display: block;
+    padding-block: var(--sec-pad);
+  }
+  main > #forma > .wrap { height: auto; min-height: 0; flex: none; }
+}
+
+/* ---------------------------------------------------------------- hero */
+main > .hero {
+  height: auto; min-height: 0;
+  padding-bottom: var(--sec-pad);
+  overflow: visible;
+}
+main > .hero > .wrap { height: auto; display: block; }
+.hero > .wrap > .hero-text { height: auto; }
+.hero-text.hero__grid { grid-template-rows: auto; align-content: start; align-items: center; column-gap: var(--col-gap); }
+.hero--split .hero__grid { align-items: center; }
+.hero--split .hero__text { align-self: center; }
+.hero--split .hero__text > h1:first-child { text-box: none; }
+.hero h1 { overflow-wrap: break-word; }
+@media (min-width: 1024px) {
+  main > .hero {
+    min-height: calc(100svh - var(--nav-h));
+    display: flex; flex-direction: column; justify-content: center;
+    padding-bottom: var(--hpadb);
+  }
+  main > .hero > .wrap { width: 100%; max-width: calc(1200px + 2 * var(--gutter)); }
+}
+.hero__media.hero-media,
+.hero--split .hero__media.hero-media {
+  position: relative; overflow: visible; background: none; border-radius: 0;
+  height: auto; min-height: 0; flex: none; margin-top: 0;
+  justify-self: stretch; align-self: center;
+}
+.hero-media img {
+  position: static; inset: auto; display: block; width: 100%; height: auto; max-width: 100%;
+  object-fit: fill; object-position: 0 0;
+  border-radius: var(--r-img); background: none;
+}
+.hero-media .ly-float { position: absolute; left: var(--s-5); bottom: var(--s-5); }
+@media (max-width: 1023px) {
+  .hero--split .hero__grid { display: flex; flex-direction: column; align-items: stretch; row-gap: 0; }
+  .hero__media.hero-media,
+  .hero--split .hero__media.hero-media { width: 100%; max-width: 720px; margin-inline: auto; margin-top: var(--s-6); }
+  .hero-media .ly-float { position: static; margin-top: var(--s-4); width: auto; }
+}
+
+/* ---------------------------------------------------------------- imágenes: una sola regla */
+.zx-shot__img, .zx-card__img, .perfil__img, .hero-media img {
+  display: block; width: 100%; height: auto; max-width: 100%;
+  border-radius: var(--r-img); background: none; object-fit: fill; position: static;
+}
+.zx-shot, .perfil { margin: 0; }
+/* la foto de perfil tiene fondo transparente arriba: se le da fondo para que se vean las cuatro esquinas */
+.perfil .perfil__img { background: linear-gradient(180deg, var(--p-surface) 0%, var(--p-bg) 100%); border: 1px solid var(--line); }
+/* celular: los datos de "Sobre mí" no se cortan en tres líneas */
+@media (max-width: 479px) { .rows--spec .rows__value { max-width: none; } }
+/* tablet: el certificado llena mejor su cuadro */
+@media (min-width: 640px) and (max-width: 1023px) { #cursos .peek-frame { max-width: 600px; } }
+.zx-shot { width: 100%; max-width: 1200px; margin-inline: auto; }
+
+/* ---------------------------------------------------------------- ZUNOX */
+.zx-intro { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--col-gap); align-items: center; }
+.zx-intro__text { min-width: 0; }
+.zx-intro .rows > li:last-child { border-bottom: 0; }
+@media (min-width: 1280px) {
+  .zx-intro { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .zx-intro .rows { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); }
+  .zx-intro .rows > li { padding-top: 0; border-bottom: 0; align-content: start; }
+}
+.zx-cards { margin-top: calc(var(--sec-pad) / 1.5); display: grid; gap: var(--col-gap); grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+.zx-card { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
+.zx-card__text { display: grid; gap: var(--s-2); }
+.zx-card h3 { font-family: var(--font-text); font-weight: 500; font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; color: var(--ink); }
+.zx-card p { font-size: 16px; color: var(--muted); max-width: 52ch; }
+.zx-card__img { margin-top: auto; }
+@media (max-width: 1023px) {
+  .zx-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .zx-card:nth-child(3) { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--col-gap); align-items: center; }
+  .zx-card:nth-child(3) .zx-card__img { margin-top: 0; }
+}
+@media (max-width: 639px) {
+  .zx-cards { grid-template-columns: minmax(0, 1fr); }
+  .zx-card:nth-child(3) { display: flex; flex-direction: column; gap: var(--s-4); }
+}
+
+/* ---------------------------------------------------------------- peek (Proyectos y Cursos) */
+.peek { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-6); align-items: center; }
+.peek__list { min-width: 0; }
+[data-peek] > .rows { align-self: center; }
+@media (min-width: 1024px) {
+  .peek { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: var(--col-gap); }
+}
+.peek-frame {
+  display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center;
+  aspect-ratio: 16 / 10; min-width: 0; box-sizing: border-box;
+  background: var(--p-surface); border: 1px solid var(--line); border-radius: var(--r-img); padding: 12px;
+}
+#cursos .peek-frame { aspect-ratio: 4 / 3; }
+.peek-frame__img {
+  grid-area: 1 / 1; position: static; display: block;
+  width: auto; height: auto; max-width: 100%; max-height: 100%;
+  border-radius: 6px; object-fit: fill; background: none;
+}
+.peek-frame__img[hidden] { display: none; }
+@media (max-width: 1023px) {
+  .peek-frame { width: 100%; max-width: 720px; margin-inline: auto; }
+}
+
+/* ---------------------------------------------------------------- filas con botón "Ver" */
+.rows > li > .rows__cta { margin: var(--s-3) 0 0; grid-column: 1; }
+.rows__value { align-self: start; }
+.btn-ver {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 14px; box-sizing: border-box;
+  color: var(--p-accent); font-size: 15px; font-weight: 600; text-decoration: none;
+  background: transparent; border: 1px solid color-mix(in oklab, var(--p-accent) 50%, transparent); border-radius: 999px;
+  transition: background-color 160ms, border-color 160ms;
+}
+.btn-ver .m-arrow { width: 12px; height: 12px; margin: 0; stroke: currentColor; fill: none; stroke-width: 1.6; transition: transform 160ms; }
+.btn-ver:hover { background: color-mix(in oklab, var(--p-accent) 12%, transparent); border-color: var(--p-accent); }
+.btn-ver:hover .m-arrow { transform: translateX(2px); }
+.btn-ver:focus-visible { outline: 2px solid var(--p-accent); outline-offset: 2px; border-radius: 999px; }
+@media (prefers-reduced-motion: reduce) {
+  .btn-ver, .btn-ver .m-arrow { transition: none; }
+  .btn-ver:hover .m-arrow { transform: none; }
+}
+
+/* ---------------------------------------------------------------- sobre mí */
+.perfil-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--col-gap); align-items: center; }
+.perfil { margin: 0; justify-self: center; width: 100%; max-width: 400px; }
+@media (min-width: 640px) { .perfil-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); } }
+@media (min-width: 1280px) { .perfil-grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); } }
+@media (max-width: 639px) { .perfil { order: -1; max-width: 280px; } }
+
+/* ---------------------------------------------------------------- tecnologías */
+.tec-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-7) var(--col-gap); align-items: start; }
+.tec-group { min-width: 0; }
+@media (max-width: 1023px) { .tec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .tec-grid { grid-template-columns: minmax(0, 1fr); } }
+.tec { display: grid; padding: 0; margin: 0; list-style: none; }
+.tec li { display: flex; align-items: center; gap: var(--s-4); font-size: 16px; padding-block: var(--s-3); border-bottom: 1px solid var(--line); }
+.tec img { width: 40px; height: 40px; padding: 8px; flex: none; border-radius: var(--r-sm); background: var(--g-alt); }
+.tec .muted { font-size: 13px; }
+@media (min-width: 640px) and (max-width: 1023px) { .tec li { padding-block: var(--s-2); } }
+@media (max-width: 639px) {
+  header.nav .nav__logo.marca { font-size: 15px; letter-spacing: 0; }
+  .tec li { padding-block: var(--s-2); }
+  .tec img { width: 32px; height: 32px; padding: 6px; }
+}
+@media (max-width: 359px) { header.nav .nav__logo.marca { font-size: 12px; } }
+
+/* ---------------------------------------------------------------- footer */
+footer.closing { padding-block: var(--sec-pad); }
+
+/* ---------------------------------------------------------------- colores originales de José (versión de octubre 2026)
+   fondo #0B1120 con brillo verde azulado, tarjetas #0f172a, borde #334155, subtítulos #38bdf8,
+   cian #48dbfb, azul #335cb4, etiquetas azules y botones oscuros con borde cian */
+:root {
+  --jz-sky: #38bdf8;
+  --jz-azul: #335cb4;
+  --jz-borde: #334155;
+  --jz-glow: rgba(0, 120, 120, 0.16);
+  --jz-tag: rgba(0, 65, 109, 0.7);
+  --jz-btn-a: rgba(8, 24, 63, 0.9);
+  --jz-btn-b: rgba(15, 23, 42, 0.9);
+  --jz-btn-hover-a: rgba(14, 42, 98, 0.95);
+  --jz-btn-hover-b: rgba(0, 39, 54, 0.95);
+  --jz-btn-line: rgba(56, 189, 248, 0.4);
+  --line: var(--jz-borde);
+}
+body {
+  background:
+    radial-gradient(circle at 70% 20%, var(--jz-glow), transparent 50%) fixed,
+    radial-gradient(circle at 20% 80%, rgba(0, 120, 120, 0.14), transparent 50%) fixed,
+    var(--p-bg);
+}
+/* las secciones sin fondo propio dejan ver el brillo; las de superficie usan el tono de tus tarjetas */
+main > section:not(.ground-surface) { background: transparent; }
+main > section.ground-surface { background: color-mix(in oklab, var(--p-surface) 75%, transparent); }
+
+/* subtítulos en celeste, como antes */
+.zx-card h3, .tec-group h3, .t-card { color: var(--jz-sky); }
+
+/* etiquetas (Java, C#, Web Forms, midudev…) como tus tags azules */
+.peek__list .rows__value {
+  background: var(--jz-tag); color: var(--p-ink); border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px; padding: 2px 10px; font-size: 13px; align-self: start; height: auto;
+}
+
+/* botones: oscuros con borde cian (tu botón "Descargar CV" original) */
+.btn.btn--primary {
+  background: linear-gradient(135deg, var(--jz-btn-a), var(--jz-btn-b));
+  color: #fff; border: 1px solid var(--jz-btn-line); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.btn.btn--primary:hover {
+  background: linear-gradient(135deg, var(--jz-btn-hover-a), var(--jz-btn-hover-b));
+  border-color: var(--jz-sky); box-shadow: 0 8px 24px rgba(56, 189, 248, 0.25); color: #fff;
+}
+.btn.btn--secondary { border-color: var(--jz-btn-line); }
+.btn.btn--secondary:hover { border-color: var(--jz-sky); }
+
+/* fotos y cuadros con el borde de tus tarjetas */
+.peek-frame { border-color: var(--jz-borde); }
+.perfil .perfil__img { border: 1px solid rgba(56, 189, 248, 0.5); box-shadow: 0 0 25px rgba(0, 120, 120, 0.4); }
+
+/* ---------------------------------------------------------------- GitHub de José, visible como antes
+   menú de arriba, hero, cabecera de Proyectos y contacto con íconos */
+.gh-ico { width: 18px; height: 18px; flex: none; display: inline-block; vertical-align: -3px; }
+.nav-gh { display: inline-flex; align-items: center; gap: 8px; color: var(--p-ink); }
+.nav-gh:hover { color: var(--p-accent); }
+.btn-gh { display: inline-flex; align-items: center; gap: 8px; }
+#proyectos .section-head .rows__cta { margin-top: var(--s-4); }
+.footer__col .ct { display: inline-flex; align-items: center; gap: 10px; }
+.footer__col .ct img { width: 18px; height: 18px; flex: none; }
+
+/* ---------------------------------------------------------------- "en práctica": etiqueta con borde ámbar/naranja */
+:root { --jz-practica: #f59e0b; --jz-practica-ink: #fbbf24; }
+.tec .practica {
+  margin-left: auto; flex: none;
+  font-size: 12px; font-weight: 600; line-height: 1.4;
+  color: var(--jz-practica-ink);
+  border: 1px solid var(--jz-practica);
+  background: color-mix(in oklab, var(--jz-practica) 12%, transparent);
+  border-radius: 999px; padding: 2px 10px;
+}

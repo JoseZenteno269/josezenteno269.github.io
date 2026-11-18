@@ -1,477 +1,310 @@
-<!DOCTYPE html>
-<html lang="es">
-
+<!doctype html>
+<html lang="es" data-type="service" data-radius="soft" data-buttons="arrow" data-motion>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Zenteno | Desarrollador Backend Junior · C#, .NET y Java</title>
-    <meta name="description"
-        content="Portafolio de José Zenteno, desarrollador backend en formación (C#, .NET, Java y SQL). Estudiante de la Tecnicatura en Programación de la UTN FRGP. Proyectos, tecnologías y contacto.">
-    <meta name="author" content="José Luis Zenteno Murillo">
-    <meta name="theme-color" content="#0B1120">
-    <link rel="canonical" href="https://josezenteno.dev/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_AR">
-    <meta property="og:site_name" content="José Zenteno">
-    <meta property="og:title" content="José Zenteno | Desarrollador Backend Junior">
-    <meta property="og:description"
-        content="C#, .NET, Java y SQL. Proyectos, tecnologías y lo que estoy construyendo ahora: un sistema de gestión para un negocio de impresión 3D, en equipo.">
-    <meta property="og:url" content="https://josezenteno.dev/">
-    <meta property="og:image" content="https://josezenteno.dev/Imagenes/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="José Zenteno, desarrollador backend junior: C#, .NET y Java">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="icon" href="iconos/Logo.svg" type="image/svg+xml">
-    <link rel="preload" href="Fuentes/AsusRog-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link href="Css/index.css" rel="stylesheet">
-    <script>document.documentElement.classList.add("js");</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>José Zenteno: desarrollador backend junior en C#, .NET y Java</title>
+<meta name="description" content="Portafolio de José Zenteno, estudiante de la UTN FRGP que busca su primer trabajo como backend junior. Proyectos en C#, .NET y Java, entre ellos ZUNOX 3D, un sistema en producción.">
+<meta name="author" content="José Luis Zenteno Murillo">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="José Zenteno">
+<meta property="og:title" content="José Zenteno: desarrollador backend junior">
+<meta property="og:description" content="C#, .NET y Java. ZUNOX 3D, un sistema de pedidos que hicimos en equipo y hoy usa un negocio real.">
+<meta property="og:url" content="https://josezenteno.dev/">
+<meta property="og:image" content="https://josezenteno.dev/Imagenes/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="José Zenteno, desarrollador backend junior: C#, .NET y Java">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="iconos/Logo.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b1120">
+<link rel="canonical" href="https://josezenteno.dev/">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="preload" href="Fuentes/AsusRog-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<link rel="stylesheet" href="Css/portafolio.css">
+<style>
+:root {
+  --p-bg: #0b1120; --p-surface: #0f172a; --p-ink: #e2e8f0; --p-muted: #94a3b8;
+  --p-accent: #48dbfb; --p-accent-ink: #0b1120; --p-action: #48dbfb; --p-action-ink: #0b1120;
+  --p-inv-bg: #08183f; --p-inv-surface: #0f172a; --p-inv-ink: #e2e8f0; --p-inv-muted: #94a3b8;
+  --p-inv-accent: #48dbfb; --p-inv-accent-ink: #0b1120; --p-inv-action: #48dbfb; --p-inv-action-ink: #0b1120;
+  --font-display: "Arial Black", "Segoe UI", sans-serif;
+  --font-text: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.01em;
+  --display-tracking-xl: -0.015em;
+  --ly-scale: 0.92;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
+<!-- page CSS: la marca de José (fuente ROG en el nombre); el resto está en Css/portafolio.css -->
+<style>
+  @font-face { font-family: "ROG Fonts"; src: url("Fuentes/AsusRog-Regular.ttf") format("truetype"); font-display: swap; }
+  :root { --font-brand: "ROG Fonts", var(--font-display); }
+  .nav__logo.marca { font-family: var(--font-brand); font-size: 18px; letter-spacing: .04em; color: var(--ink); }
+  /* la ROG no trae la "é": se dibuja la tilde sobre la "e" */
+  .tilde { position: relative; display: inline-block; line-height: 1; }
+  .tilde::after { content: ""; position: absolute; left: 38%; top: -0.02em; width: .26em; height: .1em; background: currentColor; transform: skewX(-40deg); border-radius: 2px; }
+</style>
 </head>
-
 <body>
-    <a class="saltar" href="#main">Saltar al contenido</a>
+<!-- type: service (José ofrece su trabajo: lo contratan como junior o como equipo)
+     deal: hero split, nav nav-split, close close-type, footer footer-dark, rhythm surface-pairs, buttons arrow, mark wordmark (el nombre en ROG)
+     palette: los colores de la marca de José: fondo azul marino #0b1120, cian #48dbfb como acción; fuentes Arial Black, Segoe UI y ROG en el nombre
+     moments: word-highlight en #forma -->
 
-    <header class="panel">
-        <button id="btn_menu" class="btn-menu" aria-label="Abrir menú" aria-expanded="false"
-            aria-controls="menu_lateral">☰</button>
-        <a href="#inicio" class="marca" aria-label="José Zenteno, volver al inicio">JZ</a>
-        <nav class="links" aria-label="Principal">
-            <a href="#sobre-mi">Sobre mí</a>
-                        <a href="#proyectos">Proyectos</a>
-            <a href="#tecnologias">Tecnologías</a>
-            <a href="#certificados">Certificados</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-        <a class="panel-github" href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer"
-            aria-label="GitHub de José Zenteno (se abre en otra pestaña)">
-            <img src="iconos/github_dark.svg" alt="" width="22" height="22">
-        </a>
-    </header>
-
-    <nav id="menu_lateral" class="menu_lateral" aria-label="Menú" aria-hidden="true">
-        <div class="menu_lateral-cabecera">
-            <span class="marca">JZ</span>
-            <button id="btn_cerrar" aria-label="Cerrar menú">✕</button>
-        </div>
-        <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
-        <a href="#tecnologias">Tecnologías</a>
-        <a href="#certificados">Certificados</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer">GitHub</a>
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Saltar al contenido</a>
+    <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item"><a class="nav__link" href="#zunox">ZUNOX</a></div>
+      <div class="nav__item"><a class="nav__link" href="#proyectos">Proyectos</a></div>
+      <div class="nav__item"><a class="nav__link" href="#sobre-mi">Perfil</a></div>
+      <div class="nav__item"><a class="nav__link" href="#stack">Tecnologías</a></div>
+      <div class="nav__item"><a class="nav__link" href="#cursos">Cursos</a></div>
     </nav>
+    <a class="nav__logo marca" href="#top" aria-label="José Zenteno, ir al inicio"><span aria-hidden="true">Jos<span class="tilde">e</span> Zenteno</span></a>
+    <div class="nav__actions">
+      <a class="nav__link nav-gh" href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer"><img class="gh-ico" src="iconos/github_dark.svg" alt="" width="18" height="18">GitHub</a>
+      <a class="btn btn--primary" href="Archivos/CV_Jose_Zenteno.pdf" download="CV_Jose_Zenteno.pdf">Descargar CV</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menú">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
 
-    <div id="overlay" class="overlay"></div>
+<main id="top">
+  <section class="hero hero--split" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text grid hero__grid">
+      <div class="hero__text span-6">
+        <p class="hero__kicker">Soy José Zenteno, de Pilar, Buenos Aires</p>
+        <h1 id="hero-h">Desarrollador backend en C#, .NET y Java</h1>
+        <p class="hero__lead">Estudio programación en la UTN FRGP y busco mi primer trabajo como junior. Con mi equipo hicimos ZUNOX 3D, un sistema de pedidos que hoy usa un negocio real.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="Archivos/CV_Jose_Zenteno.pdf" download="CV_Jose_Zenteno.pdf">Descargar CV<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary btn-gh" href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer"><img class="gh-ico" src="iconos/github_dark.svg" alt="" width="18" height="18">Mi GitHub</a>
+          <a class="btn btn--secondary" href="#zunox">Ver ZUNOX 3D</a>
+        </div>
+      </div>
+      <div class="hero__media span-6 start-7 hero-media">
+        <!-- imagen principal: Imagenes/web/hero.webp (José la reemplaza); poné width/height reales del archivo -->
+        <img src="Imagenes/web/zunox-inicio.webp" alt="Página de inicio de ZUNOX 3D, con una impresora 3D animada y el botón para ver el catálogo" width="1400" height="871" fetchpriority="high">
+        <div class="ly-float">
+          <div class="ly-float__row"><span class="ly-live">En producción</span><span>noviembre de 2026</span></div>
+          <div class="ly-float__title">Pedidos, catálogo y avisos por mail</div>
+        </div>
+      </div>
+    </div></div>
+  </section>
 
-    <main id="main">
-
-        <!-- INICIO -->
-        <section id="inicio" class="hero">
-            <div class="hero-texto">
-                <p class="estado">Buscando mi primer empleo IT en Zona Norte, Buenos Aires</p>
-                <h1>
-                    <span class="sr-only">Hola, soy José Zenteno</span>
-                    <span aria-hidden="true">Hola, soy <br><span class="nombre">Jos<span class="tilde">e</span>
-                            Zenteno</span></span>
-                </h1>
-                <p class="hero-rol">Desarrollador backend en formación, con C# / .NET y Java</p>
-                <p class="hero-intro">
-                    Estudio la Tecnicatura Universitaria en Programación en la UTN FRGP. Me enfoco en el
-                    backend: APIs REST con ASP.NET Core, acceso a datos con ADO.NET y bases relacionales como
-                    SQL Server, MySQL y PostgreSQL. Busco un puesto
-                    <b class="resalte">Backend Junior o Trainee</b>, remoto, híbrido o presencial.
-                </p>
-                <div class="hero-acciones">
-                    <a href="Archivos/CV_Jose_Zenteno.pdf" download="CV_Jose_Zenteno.pdf"
-                        class="boton boton-principal">Descargar CV</a>
-                    <a href="#proyectos" class="boton">Ver proyectos</a>
-                    <a href="#contacto" class="boton boton-texto">Contactarme</a>
-                </div>
-                <a href="#en-curso" class="ahora">
-                    <span class="ahora-etiqueta">Ahora</span>
-                    Desarrollando con mi equipo un sistema real para un negocio de impresión 3D. En paralelo, practico Java con Spring Boot.
-                </a>
+  <section class="section" id="zunox" aria-labelledby="zunox-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="zunox-h">ZUNOX 3D, el sistema de un negocio de impresión 3D. <span class="muted">Lo hicimos entre tres, como TechIntoBios.</span></h2>
+        </div>
+        <div class="zx-intro">
+          <div class="zx-intro__text stack-4">
+            <ul class="rows">
+              <li><span class="rows__name">Para el dueño</span><p>Carga clientes y pedidos, maneja el catálogo y cambia el estado de cada pedido.</p></li>
+              <li><span class="rows__name">Para el cliente</span><p>Mira el catálogo, consulta por WhatsApp y sigue su pedido con un link propio.</p></li>
+              <li><span class="rows__name">Por dentro</span><p>API en C# con .NET 10, ADO.NET sobre PostgreSQL, sesión con JWT y mails con Resend.</p></li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn--secondary" href="https://zunox3d.com.ar" target="_blank" rel="noopener noreferrer">Ver el sitio</a>
+              <a class="link" href="https://github.com/TechIntoBios/Gestion-3D" target="_blank" rel="noopener noreferrer">Ver el código en GitHub</a>
             </div>
-            <div class="hero-foto">
-                <img src="Imagenes/web/perfil.webp" alt="Foto de José Zenteno" width="480" height="467"
-                    fetchpriority="high">
-            </div>
-        </section>
+          </div>
+          <figure class="zx-shot">
+            <img class="zx-shot__img" src="Imagenes/web/zunox-panel-pedido.webp" alt="Panel de ZUNOX 3D para cargar un pedido: datos del cliente a la izquierda y productos con subtotal a la derecha" width="1200" height="645" loading="lazy">
+          </figure>
+        </div>
+      </div>
+      <div class="zx-cards">
+        <article class="zx-card">
+          <div class="zx-card__text">
+            <h3>Seguimiento del pedido</h3>
+            <p>Cada pedido tiene un link único con el estado, el detalle y el total.</p>
+          </div>
+          <img class="zx-card__img" src="Imagenes/web/zunox-seguimiento-cliente.webp" alt="Página de seguimiento que ve el cliente, con el estado y el detalle del pedido" width="1000" height="430" loading="lazy">
+        </article>
+        <article class="zx-card">
+          <div class="zx-card__text">
+            <h3>Aviso por mail</h3>
+            <p>Cuando el negocio cambia el estado, el cliente recibe un mail automático.</p>
+          </div>
+          <img class="zx-card__img" src="Imagenes/web/zunox-mail.webp" alt="Mail que recibe el cliente cuando cambia el estado de su pedido" width="1000" height="531" loading="lazy">
+        </article>
+        <article class="zx-card">
+          <div class="zx-card__text">
+            <h3>Panel de seguimiento</h3>
+            <p>El negocio encuentra los pedidos de un cliente, deja una observación y edita sus datos.</p>
+          </div>
+          <img class="zx-card__img" src="Imagenes/web/zunox-seguimiento-admin.webp" alt="Panel de seguimiento del negocio con la lista de pedidos de un cliente" width="1200" height="614" loading="lazy">
+        </article>
+      </div>
+    </div>
+  </section>
 
-        <!-- SOBRE MÍ -->
-        <section id="sobre-mi" class="seccion revelar">
-            <h2>Sobre mí</h2>
-            <div class="sobre-mi">
-                <div class="sobre-mi-texto">
-                    <p>
-                        Mi camino a la programación no fue directo. En la secundaria me recibí de
-                        <b>técnico electromecánico</b> y trabajé varios años en ese rubro, operando y configurando
-                        maquinaria industrial. Después pasé a <b>soporte técnico y mesa de ayuda</b>, resolviendo
-                        incidentes de forma remota o telefónica.
-                    </p>
-                    <p>
-                        Usando la computadora todos los días me di cuenta de que lo que me interesaba era entender
-                        cómo funciona el software por dentro y armar mis propias soluciones. Por eso arranqué la
-                        carrera, y ahí encontré lo mío en el backend: modelar la base de datos, diseñar la API y
-                        resolver la lógica de negocio.
-                    </p>
-                    <p>
-                        Mi lenguaje fuerte es <b>C#</b> con .NET. <b>Java</b> lo estoy trabajando en la facultad y en
-                        práctica propia. Uso la IA como una herramienta más, pero primero está entender la lógica:
-                        si no sé por qué funciona algo, no lo doy por terminado.
-                    </p>
-                </div>
-                <ul class="datos" aria-label="Datos rápidos">
-                    <li><span>Formación</span>Tecnicatura Universitaria en Programación, UTN FRGP (egreso previsto
-                        2027)</li>
-                    <li><span>Experiencia</span>Help Desk / Soporte técnico y técnico electromecánico</li>
-                    <li><span>Busco</span>Backend Junior / Trainee con C#, .NET o Java</li>
-                    <li><span>Modalidad</span>Remoto, híbrido o presencial (Buenos Aires / Zona Norte)</li>
-                </ul>
-            </div>
-        </section>
+  <section class="section statement" id="forma" data-moment="word-highlight" aria-label="Cómo trabajo">
+    <div class="wrap">
+      <p class="t-label">Cómo trabajo</p>
+      <p class="mo-wh__text">Mi lenguaje fuerte es C# con .NET, y en Java con Spring Boot sigo practicando. Uso la IA para aprender más rápido, pero no doy nada por terminado hasta <strong>entender por qué funciona</strong>.</p>
+    </div>
+  </section>
 
-        <!-- PROYECTOS -->
-        <section id="proyectos" class="seccion revelar">
-            <h2>Proyectos</h2>
+  <section class="section ground-surface" id="proyectos" aria-labelledby="proyectos-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="proyectos-h">Proyectos de práctica y de la facultad</h2><p class="rows__cta"><a class="btn-ver" href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer"><img class="gh-ico" src="iconos/github_dark.svg" alt="" width="18" height="18">Todos mis repositorios en GitHub<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p></div>
+      <div class="peek" data-peek>
+        <ul class="rows peek__list">
+          <li data-peek-to="tienda2" tabindex="0"><span class="rows__name">Tienda Tecnológica 2.0</span><p>La tienda rehecha en Java con Spring Boot y MySQL. En curso.</p><p class="rows__cta"><a class="btn-ver" href="https://github.com/JoseZenteno269/Tienda_Tecnologica_2.0" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Tienda Tecnológica 2.0">Ver código<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p><span class="rows__value">Java</span></li>
+          <li data-peek-to="tienda" tabindex="0"><span class="rows__name">Tienda Tecnológica</span><p>API REST en capas, con transacciones y un trigger de stock.</p><p class="rows__cta"><a class="btn-ver" href="https://github.com/JoseZenteno269/Tienda_Tecnologica" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Tienda Tecnológica">Ver código<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p><span class="rows__value">C#</span></li>
+          <li data-peek-to="clinica" tabindex="0"><span class="rows__name">Gestión Clínica</span><p>Turnos médicos con roles, hecho en equipo de dos.</p><p class="rows__cta"><a class="btn-ver" href="https://github.com/JoseZenteno269/PROYECTO-CLINICA" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Gestión Clínica">Ver código<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p><span class="rows__value">Web Forms</span></li>
+          <li data-peek-to="transporte" tabindex="0"><span class="rows__name">Gestión de Transporte</span><p>Consola para una empresa de micros, con archivos binarios.</p><p class="rows__cta"><a class="btn-ver" href="https://github.com/JoseZenteno269/SISTEMA-DE-GESTION-TRANSPORTE" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Gestión de Transporte">Ver código<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p><span class="rows__value">C++</span></li>
+        </ul>
+        <div class="peek-frame">
+          <img class="peek-frame__img" data-peek-for="tienda2" src="Imagenes/web/tienda-tecnologica-2.webp" alt="Formulario para agregar productos de la Tienda Tecnológica 2.0 junto al controlador en Java" width="1000" height="610" loading="lazy">
+          <img class="peek-frame__img" data-peek-for="tienda" src="Imagenes/web/tienda-tecnologica.webp" alt="Catálogo de la Tienda Tecnológica" width="800" height="467" loading="lazy" hidden>
+          <img class="peek-frame__img" data-peek-for="clinica" src="Imagenes/web/gestion-clinica.webp" alt="Pantalla del sistema de gestión clínica" width="800" height="391" loading="lazy" hidden>
+          <img class="peek-frame__img" data-peek-for="transporte" src="Imagenes/web/gestion-transporte.webp" alt="Menú de consola del sistema de gestión de transporte" width="800" height="353" loading="lazy" hidden>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <h3 id="en-curso" class="grupo-titulo">En curso</h3>
-            <div class="contenido-proyectos en-curso">
-                <article class="tarjeta">
-                    <img src="Imagenes/web/sistema-3d.webp" class="imagen"
-                        alt="Landing de ZUNOX 3D con el catálogo y, al lado, el código del login en C#" width="1000"
-                        height="555" loading="lazy">
-                    <div class="tarjeta-cuerpo">
-                        <p class="tarjeta-tipo">Proyecto real, en equipo</p>
-                        <h4>Sistema 3D</h4>
-                        <p>
-                            Sistema web de gestión para ZUNOX 3D, el negocio de impresión 3D de un amigo, que lo va a usar en
-                            el día a día. Lo hacemos <b>en equipo de tres</b>, como TechIntoBios. Los administradores
-                            cargan productos por categoría y arman los pedidos, el cliente sigue el estado de su
-                            pedido y la landing muestra el catálogo con un botón para consultar por WhatsApp.
-                        </p>
-                        <p>
-                            La API es asincrónica (async/await), con ADO.NET sobre PostgreSQL, login con JWT en
-                            cookie, contraseñas con BCrypt y límite de intentos. En la facultad aprendí a programar
-                            de forma sincrónica; acá lo hago asincrónico.
-                        </p>
-                        <p class="pendiente"><b>Lo que falta:</b> la baja de productos y evitar duplicados.</p>
-                        <div class="tarjeta-tags">
-                            <span class="tags">C#</span>
-                            <span class="tags">.NET</span>
-                            <span class="tags">PostgreSQL</span>
-                            <span class="tags">JWT</span>
-                        </div>
-                        <a class="codigo" href="https://github.com/TechIntoBios/Gestion-3D" target="_blank"
-                            rel="noopener noreferrer">Ver código</a>
-                    </div>
-                </article>
-                <article class="tarjeta">
-                    <img src="Imagenes/web/tienda-tecnologica-2.webp" class="imagen"
-                        alt="Formulario para agregar productos de la Tienda Tecnológica 2.0 y el controlador en Java"
-                        width="1000" height="610" loading="lazy">
-                    <div class="tarjeta-cuerpo">
-                        <p class="tarjeta-tipo">Práctica personal</p>
-                        <h4>Tienda Tecnológica 2.0</h4>
-                        <p>
-                            Estoy rehaciendo la Tienda Tecnológica en <b>Java con Spring Boot</b>
-                            para aprender el stack haciendo algo que ya conozco. Mantiene la idea de catálogo,
-                            carrito y compras.
-                        </p>
-                        <p>
-                            API en capas (Controllers, DTOs, Negocio, DAO y Entidades), JDBC con procedimientos
-                            almacenados en MySQL y documentación con Swagger. El frontend es HTML, CSS y JavaScript.
-                        </p>
-                        <div class="tarjeta-tags">
-                            <span class="tags">Java</span>
-                            <span class="tags">Spring Boot</span>
-                            <span class="tags">MySQL</span>
-                            <span class="tags">Swagger</span>
-                        </div>
-                        <a class="codigo" href="https://github.com/JoseZenteno269/Tienda_Tecnologica_2.0"
-                            target="_blank" rel="noopener noreferrer">Ver código</a>
-                    </div>
-                </article>
-            </div>
+  <section class="section ground-surface" id="sobre-mi" aria-labelledby="sobre-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="sobre-h">De la electromecánica al backend</h2></div>
+      <div class="perfil-grid">
+        <div class="perfil-grid__text stack-4">
+          <p>Me recibí de técnico electromecánico y trabajé dos años operando maquinaria industrial. Después pasé a soporte técnico para la Universidad Austral, el Hospital Austral y el IAE.</p>
+          <p>Ahí me di cuenta de que quería entender el software por dentro. Hoy curso la Tecnicatura en Programación y me quedo con el backend: la base de datos, la API y la lógica del negocio.</p>
+          <ul class="rows rows--spec">
+            <li><span class="rows__name">Estudio</span><span class="rows__value">UTN FRGP, egreso en 2027</span></li>
+            <li><span class="rows__name">Busco</span><span class="rows__value">Backend junior o trainee</span></li>
+            <li><span class="rows__name">Modalidad</span><span class="rows__value">Remoto, híbrido o en Zona Norte</span></li>
+          </ul>
+        </div>
+        <figure class="perfil"><img class="perfil__img" src="Imagenes/web/perfil.webp" alt="Foto de José Zenteno" width="480" height="467" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
 
-            <div class="equipo">
-                <div>
-                    <h4>Trabajamos en equipo: TechIntoBios</h4>
-                    <p>
-                        Somos tres programadores que nos juntamos para crecer como grupo de desarrollo: armar
-                        programas que le resuelvan un problema concreto a una persona o a un negocio, con los
-                        lenguajes que manejamos. El Sistema 3D es el primero. El código está en
-                        <a href="https://github.com/TechIntoBios" target="_blank" rel="noopener noreferrer">nuestro
-                            GitHub</a>.
-                    </p>
-                    <p>
-                        <b>Estamos buscando clientes.</b> Si tenés un negocio y algo que se pueda resolver con un
-                        sistema, contanos.
-                    </p>
-                </div>
-                <a href="mailto:zentenojose123456@gmail.com?subject=Consulta%20por%20un%20proyecto"
-                    class="boton boton-principal">Contar mi proyecto</a>
-                <!-- Pasos de trabajo del equipo: se completan más adelante. -->
-            </div>
+  <section class="section" id="stack" aria-labelledby="stack-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="stack-h">Tecnologías que uso</h2><p>Lo que está marcado como en práctica lo estoy aprendiendo y todavía no es mi fuerte.</p></div>
+      <div class="tec-grid">
+        <div class="tec-group stack-4"><h3 class="t-card">Lenguajes</h3>
+          <ul class="tec">
+            <li><img src="iconos/csharp.svg" alt="">C#</li>
+            <li><img src="iconos/java.svg" alt="">Java <span class="practica">en práctica</span></li>
+            <li><img src="iconos/c-plusplus.svg" alt="">C++</li>
+            <li><img src="iconos/javascript.svg" alt="">JavaScript</li>
+            <li><img src="iconos/html5.svg" alt="">HTML y CSS</li>
+          </ul></div>
+        <div class="tec-group stack-4"><h3 class="t-card">Backend</h3>
+          <ul class="tec">
+            <li><img src="iconos/dotnet.svg" alt="">.NET y ASP.NET Core</li>
+            <li><img src="iconos/dotnet.svg" alt="">ADO.NET</li>
+            <li><img src="iconos/dotnet.svg" alt="">ASP.NET Web Forms</li>
+            <li><img src="iconos/spring.svg" alt="">Spring Boot <span class="practica">en práctica</span></li>
+          </ul></div>
+        <div class="tec-group stack-4"><h3 class="t-card">Bases de datos</h3>
+          <ul class="tec">
+            <li><img src="iconos/sql-server.svg" alt="">SQL Server</li>
+            <li><img src="iconos/postgresql.svg" alt="">PostgreSQL</li>
+            <li><img src="iconos/mysql-icon-dark.svg" alt="">MySQL</li>
+            <li><img src="iconos/sqlite.svg" alt="">SQLite <span class="practica">en práctica</span></li>
+          </ul></div>
+        <div class="tec-group stack-4"><h3 class="t-card">Herramientas</h3>
+          <ul class="tec">
+            <li><img src="iconos/git.svg" alt="">Git y GitHub</li>
+            <li><img src="iconos/visual-studio.svg" alt="">Visual Studio</li>
+            <li><img src="iconos/vscode.svg" alt="">VS Code</li>
+            <li><img src="iconos/postman.svg" alt="">Postman</li>
+            <li><img src="iconos/claude-ai-icon.svg" alt="">Claude</li>
+            <li><img src="iconos/antigravity.svg" alt="">Antigravity</li>
+          </ul></div>
+      </div>
+    </div>
+  </section>
 
-            <h3 class="grupo-titulo">Terminados</h3>
-            <div class="contenido-proyectos">
-                <article class="tarjeta">
-                    <img src="Imagenes/web/tienda-tecnologica.webp" class="imagen"
-                        alt="Pantalla del catálogo de la Tienda Tecnológica" width="800" height="467" loading="lazy">
-                    <div class="tarjeta-cuerpo">
-                        <p class="tarjeta-tipo">Práctica personal</p>
-                        <h4>Tienda Tecnológica</h4>
-                        <p>
-                            E-commerce con catálogo que se filtra por nombre y categoría, carrito que recalcula el
-                            precio según la cantidad e historial de órdenes con estados. Atrás hay una
-                            <b>API REST en capas</b> (Controllers, DTOs, Negocio, Datos) con procedimientos
-                            almacenados, transacciones y un trigger que descuenta el stock.
-                        </p>
-                        <div class="tarjeta-tags">
-                            <span class="tags">C#</span>
-                            <span class="tags">ASP.NET Core Web API</span>
-                            <span class="tags">SQL Server</span>
-                            <span class="tags">JavaScript</span>
-                        </div>
-                        <a class="codigo" href="https://github.com/JoseZenteno269/Tienda_Tecnologica" target="_blank"
-                            rel="noopener noreferrer">Ver código</a>
-                    </div>
-                </article>
-                <article class="tarjeta">
-                    <img src="Imagenes/web/gestion-clinica.webp" class="imagen"
-                        alt="Pantalla del Sistema de Gestión Clínica" width="800" height="391" loading="lazy">
-                    <div class="tarjeta-cuerpo">
-                        <h4>Sistema de Gestión Clínica</h4>
-                        <p>
-                            Sistema web de turnos médicos hecho <b>en equipo de dos</b>: login por roles, agenda por
-                            profesional, gestión de pacientes y médicos, e informes. Armado en arquitectura de capas
-                            con persistencia en SQL Server.
-                        </p>
-                        <div class="tarjeta-tags">
-                            <span class="tags">C#</span>
-                            <span class="tags">ASP.NET Web Forms</span>
-                            <span class="tags">SQL Server</span>
-                        </div>
-                        <a class="codigo" href="https://github.com/JoseZenteno269/PROYECTO-CLINICA" target="_blank"
-                            rel="noopener noreferrer">Ver código</a>
-                    </div>
-                </article>
-                <article class="tarjeta">
-                    <img src="Imagenes/web/gestion-transporte.webp" class="imagen"
-                        alt="Menú de consola del Sistema de Gestión de Transporte" width="800" height="353"
-                        loading="lazy">
-                    <div class="tarjeta-cuerpo">
-                        <h4>Sistema de Gestión de Transporte</h4>
-                        <p>
-                            Sistema de consola para una empresa de micros: alta de vehículos, viajes, venta de pasajes
-                            y reportes, con persistencia en archivos binarios. Lo hice en Programación II para
-                            practicar POO y estructuras de datos.
-                        </p>
-                        <div class="tarjeta-tags">
-                            <span class="tags">C++</span>
-                            <span class="tags">POO</span>
-                            <span class="tags">Archivos binarios</span>
-                        </div>
-                        <a class="codigo" href="https://github.com/JoseZenteno269/SISTEMA-DE-GESTION-TRANSPORTE"
-                            target="_blank" rel="noopener noreferrer">Ver código</a>
-                    </div>
-                </article>
-            </div>
-        </section>
+  <section class="section" id="cursos" aria-labelledby="cursos-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="cursos-h">Cursos que terminé en 2026</h2></div>
+      <div class="peek" data-peek>
+        <ul class="rows peek__list">
+          <li data-peek-to="sql" tabindex="0"><span class="rows__name">Aprende SQL</span><p>Consultas, JOIN, CTE, funciones de ventana y transacciones.</p><p class="rows__cta"><a class="btn-ver" href="https://certificados.midudev.com/197b56ed-3218-4949-a4aa-ea53bae66f38.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado de Aprende SQL">Ver certificado<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p><span class="rows__value">midudev</span></li>
+          <li data-peek-to="git" tabindex="0"><span class="rows__name">Git y GitHub</span><p>Ramas, conflictos y trabajo en equipo con repositorios.</p><p class="rows__cta"><a class="btn-ver" href="https://todocodeacademy.com/certificate/git-y-github-y5j/" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado de Git y GitHub">Ver certificado<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p><span class="rows__value">TodoCode</span></li>
+          <li data-peek-to="ia" tabindex="0"><span class="rows__name">Desarrollo con IA</span><p>Planificar antes de pedir código y revisar lo que hacen los agentes.</p><p class="rows__cta"><a class="btn-ver" href="Imagenes/Certificado%20-%20Desarrollo%20con%20IA.png" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado de Desarrollo con IA">Ver certificado<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p><span class="rows__value">BIG school</span></li>
+          <li data-peek-to="python" tabindex="0"><span class="rows__name">Python, tres cursos</span><p>Fundamentos del lenguaje y Python para desarrolladores.</p><p class="rows__cta"><a class="btn-ver" href="https://www.datacamp.com/statement-of-accomplishment/course/c87ba580e17914a9cec417075e1f404789fe5d83?raw=1" target="_blank" rel="noopener noreferrer" aria-label="Ver el primer certificado de Python">Ver el primero<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p><span class="rows__value">DataCamp</span></li>
+        </ul>
+        <div class="peek-frame">
+          <img class="peek-frame__img" data-peek-for="sql" src="Imagenes/web/cert-sql.webp" alt="Certificado del curso Aprende SQL de midudev" width="560" height="395" loading="lazy">
+          <img class="peek-frame__img" data-peek-for="git" src="Imagenes/web/cert-git.webp" alt="Certificado del curso de Git y GitHub de TodoCode" width="560" height="432" loading="lazy" hidden>
+          <img class="peek-frame__img" data-peek-for="ia" src="Imagenes/web/cert-ia.webp" alt="Certificado del curso Desarrollo con IA de BIG school" width="560" height="432" loading="lazy" hidden>
+          <img class="peek-frame__img" data-peek-for="python" src="Imagenes/web/cert-python-intro.webp" alt="Certificado de Introducción a Python de DataCamp" width="560" height="432" loading="lazy" hidden>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-        <!-- TECNOLOGÍAS -->
-        <section id="tecnologias" class="seccion revelar">
-            <h2>Tecnologías</h2>
-            <p class="seccion-bajada">Lo que uso hoy. Lo marcado como <span class="nivel">en práctica</span> lo estoy
-                aprendiendo y todavía no es mi fuerte.</p>
-            <div class="grupos-tecnologias">
-                <div class="grupo">
-                    <h3>Lenguajes</h3>
-                    <ul class="lista-tec">
-                        <li><img src="iconos/csharp.svg" alt="" width="28" height="28">C#</li>
-                        <li><img src="iconos/java.svg" alt="" width="28" height="28">Java <span class="nivel">en
-                                práctica</span></li>
-                        <li><img src="iconos/c-plusplus.svg" alt="" width="28" height="28">C++</li>
-                        <li><img src="iconos/javascript.svg" alt="" width="28" height="28">JavaScript</li>
-                        <li><img src="iconos/html5.svg" alt="" width="28" height="28">HTML</li>
-                        <li><img src="iconos/css_old.svg" alt="" width="28" height="28">CSS</li>
-                    </ul>
-                </div>
-                <div class="grupo">
-                    <h3>Backend</h3>
-                    <ul class="lista-tec">
-                        <li><img src="iconos/dotnet.svg" alt="" width="28" height="28">.NET / ASP.NET Core</li>
-                        <li><svg class="icono-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4c-2 0-3 1-3 3v2c0 1.5-1 3-2 3 1 0 2 1.5 2 3v2c0 2 1 3 3 3M16 4c2 0 3 1 3 3v2c0 1.5 1 3 2 3-1 0-2 1.5-2 3v2c0 2-1 3-3 3"/></svg>APIs REST</li>
-                        <li><img src="iconos/dotnet.svg" alt="" width="28" height="28">ADO.NET</li>
-                        <li><img src="iconos/dotnet.svg" alt="" width="28" height="28">ASP.NET Web Forms</li>
-                        <li><img src="iconos/spring.svg" alt="" width="28" height="28">Spring Boot <span
-                                class="nivel">en práctica</span></li>
-                    </ul>
-                </div>
-                <div class="grupo">
-                    <h3>Bases de datos</h3>
-                    <ul class="lista-tec">
-                        <li><img src="iconos/sql-server.svg" alt="" width="28" height="28">SQL Server</li>
-                        <li><img src="iconos/mysql-icon-dark.svg" alt="" width="28" height="28">MySQL</li>
-                        <li><img src="iconos/postgresql.svg" alt="" width="28" height="28">PostgreSQL <span
-                                class="nivel">en práctica</span></li>
-                        <li><img src="iconos/sqlite.svg" alt="" width="28" height="28">SQLite <span class="nivel">en
-                                práctica</span></li>
-                    </ul>
-                </div>
-                <div class="grupo">
-                    <h3>Herramientas</h3>
-                    <ul class="lista-tec">
-                        <li><img src="iconos/git.svg" alt="" width="28" height="28">Git</li>
-                        <li><img src="iconos/github_dark.svg" alt="" width="28" height="28">GitHub</li>
-                        <li><img src="iconos/visual-studio.svg" alt="" width="28" height="28">Visual Studio</li>
-                        <li><img src="iconos/vscode.svg" alt="" width="28" height="28">VS Code</li>
-                        <li><img src="iconos/postman.svg" alt="" width="28" height="28">Postman</li>
-                        <li><img src="iconos/eclipse.svg" alt="" width="28" height="28">Eclipse IDE</li>
-                        <li><img src="iconos/android-icon.svg" alt="" width="28" height="28">Android Studio <span
-                                class="nivel">en práctica</span></li>
-                    </ul>
-                </div>
-                <div class="grupo">
-                    <h3>IA para programar</h3>
-                    <ul class="lista-tec">
-                        <li><img src="iconos/claude-ai-icon.svg" alt="" width="28" height="28">Claude</li>
-                        <li><img src="iconos/antigravity.svg" alt="" width="28" height="28">Antigravity</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Busco mi primer trabajo como backend junior</h2>
+        <p>Remoto, híbrido o presencial en Zona Norte. Si tenés un negocio con algo para resolver, con TechIntoBios también tomamos proyectos.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="Archivos/CV_Jose_Zenteno.pdf" download="CV_Jose_Zenteno.pdf">Descargar CV<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-4">
+          <a class="nav__logo marca" href="#top" aria-label="José Zenteno, ir al inicio"><span aria-hidden="true">Jos<span class="tilde">e</span> Zenteno</span></a>
+          <p class="footer__lede">Desarrollador backend junior en C#, .NET y Java.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Contacto</h3><ul>
+          <li><a class="ct" href="mailto:zentenojose123456@gmail.com"><img src="iconos/gmail.svg" alt="" width="18" height="18">Mail</a></li>
+          <li><a class="ct" href="https://www.linkedin.com/in/jose-zenteno-357813235/" target="_blank" rel="noopener noreferrer"><img src="iconos/linkedin.svg" alt="" width="18" height="18">LinkedIn</a></li>
+          <li><a class="ct" href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer"><img src="iconos/github_dark.svg" alt="" width="18" height="18">GitHub</a></li>
+          <li><a class="ct" href="https://www.instagram.com/jose_z2609/" target="_blank" rel="noopener noreferrer"><img src="iconos/instagram-icon.svg" alt="" width="18" height="18">Instagram</a></li>
+        </ul></div>
+        <div class="span-2 footer__col"><h3>ZUNOX 3D</h3><ul>
+          <li><a href="https://zunox3d.com.ar" target="_blank" rel="noopener noreferrer">Sitio</a></li>
+          <li><a href="https://github.com/TechIntoBios/Gestion-3D" target="_blank" rel="noopener noreferrer">Código</a></li>
+          <li><a href="https://github.com/TechIntoBios" target="_blank" rel="noopener noreferrer">TechIntoBios</a></li>
+        </ul></div>
+        <div class="span-2 footer__col"><h3>Secciones</h3><ul>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Perfil</a></li>
+          <li><a href="#stack">Tecnologías</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 José Zenteno</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
-        <!-- CERTIFICADOS -->
-        <section id="certificados" class="seccion revelar">
-            <h2>Cursos y certificados</h2>
-            <div class="contenido-cursos">
-                <article class="tarjeta_cursos">
-                    <a href="https://certificados.midudev.com/197b56ed-3218-4949-a4aa-ea53bae66f38.pdf" target="_blank"
-                        rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
-                        <img src="Imagenes/web/cert-sql.webp" class="imagen_cursos" alt="" width="560" height="395"
-                            loading="lazy">
-                    </a>
-                    <h3>Aprende SQL</h3>
-                    <p class="emisor"><a href="https://midu.dev/" target="_blank" rel="noopener noreferrer">midudev</a>
-                    </p>
-                    <p>
-                        Consultas, JOIN, agregaciones, subconsultas, CTE, funciones de ventana y transacciones, con una
-                        introducción a SQLite, MySQL y NoSQL.
-                    </p>
-                    <a href="https://certificados.midudev.com/197b56ed-3218-4949-a4aa-ea53bae66f38.pdf" target="_blank"
-                        rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
-                </article>
-                <article class="tarjeta_cursos">
-                    <a href="https://todocodeacademy.com/certificate/git-y-github-y5j/" target="_blank"
-                        rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
-                        <img src="Imagenes/web/cert-git.webp" class="imagen_cursos" alt="" width="560" height="432"
-                            loading="lazy">
-                    </a>
-                    <h3>Introducción a Git y GitHub</h3>
-                    <p class="emisor"><a href="https://todocodeacademy.com/" target="_blank"
-                            rel="noopener noreferrer">TodoCode</a></p>
-                    <p>
-                        Control de versiones y trabajo en equipo: repositorios, ramas, resolución de conflictos y
-                        despliegue de proyectos.
-                    </p>
-                    <a href="https://todocodeacademy.com/certificate/git-y-github-y5j/" target="_blank"
-                        rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
-                </article>
-                <article class="tarjeta_cursos">
-                    <a href="Imagenes/Certificado%20-%20Desarrollo%20con%20IA.png"
-                        target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
-                        <img src="Imagenes/web/cert-ia.webp" class="imagen_cursos" alt="" width="560" height="432"
-                            loading="lazy">
-                    </a>
-                    <h3>Desarrollo con IA</h3>
-                    <p class="emisor"><a href="https://moure.dev/" target="_blank" rel="noopener noreferrer">MoureDev</a>
-                        y <a href="https://thebigschool.com/" target="_blank" rel="noopener noreferrer">BIG school</a>
-                    </p>
-                    <p>
-                        Programar con IA sin perder el control: planificar antes de escribir código, guiar a los
-                        agentes paso a paso y mantener el proyecto ordenado.
-                    </p>
-                    <a href="Imagenes/Certificado%20-%20Desarrollo%20con%20IA.png"
-                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
-                </article>
-                <article class="tarjeta_cursos">
-                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/c87ba580e17914a9cec417075e1f404789fe5d83?raw=1"
-                        target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
-                        <img src="Imagenes/web/cert-python-intro.webp" class="imagen_cursos" alt="" width="560"
-                            height="323" loading="lazy">
-                    </a>
-                    <h3>Introducción a Python</h3>
-                    <p class="emisor"><a href="https://www.datacamp.com/" target="_blank"
-                            rel="noopener noreferrer">DataCamp</a></p>
-                    <p>
-                        Fundamentos de Python: variables, tipos de datos, listas, funciones, paquetes y una base de
-                        NumPy.
-                    </p>
-                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/c87ba580e17914a9cec417075e1f404789fe5d83?raw=1"
-                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
-                </article>
-                <article class="tarjeta_cursos">
-                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/018446a93ee76c9e34c2c0053a95fcc5428732e3?raw=1"
-                        target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
-                        <img src="Imagenes/web/cert-python-dev.webp" class="imagen_cursos" alt="" width="560"
-                            height="322" loading="lazy">
-                    </a>
-                    <h3>Python para Desarrolladores</h3>
-                    <p class="emisor"><a href="https://www.datacamp.com/" target="_blank"
-                            rel="noopener noreferrer">DataCamp</a></p>
-                    <p>
-                        Diccionarios, conjuntos, tuplas, condicionales y bucles para armar programas y flujos de
-                        trabajo.
-                    </p>
-                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/018446a93ee76c9e34c2c0053a95fcc5428732e3?raw=1"
-                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
-                </article>
-                <article class="tarjeta_cursos">
-                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/eaa8f4c76acb4ebf3fe1aee7a6ffa6c46d50e2f0?raw=1"
-                        target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
-                        <img src="Imagenes/web/cert-python-dev-2.webp" class="imagen_cursos" alt="" width="560"
-                            height="322" loading="lazy">
-                    </a>
-                    <h3>Python para Desarrolladores (Intermedio)</h3>
-                    <p class="emisor"><a href="https://www.datacamp.com/" target="_blank"
-                            rel="noopener noreferrer">DataCamp</a></p>
-                    <p>
-                        Funciones propias, módulos, paquetes, pandas, funciones lambda y manejo de errores.
-                    </p>
-                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/eaa8f4c76acb4ebf3fe1aee7a6ffa6c46d50e2f0?raw=1"
-                        target="_blank" rel="noopener noreferrer" class="link_certificado">Ver certificado</a>
-                </article>
-            </div>
-        </section>
-
-        <!-- CONTACTO -->
-        <section id="contacto" class="contacto revelar">
-            <h2>¿Hablamos?</h2>
-            <p>Si buscás un perfil backend junior, o tenés un proyecto para nuestro equipo, escribime.</p>
-            <div class="contenido-contacto">
-                <a href="mailto:zentenojose123456@gmail.com"><img src="iconos/gmail.svg" class="imagen-contacto" alt=""
-                        width="20" height="20">Mail</a>
-                <a href="https://www.linkedin.com/in/jose-zenteno-357813235/" target="_blank"
-                    rel="noopener noreferrer"><img src="iconos/linkedin.svg" class="imagen-contacto" alt="" width="20"
-                        height="20">LinkedIn</a>
-                <a href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer"><img
-                        src="iconos/github_dark.svg" class="imagen-contacto" alt="" width="20" height="20">GitHub</a>
-                <a href="https://www.instagram.com/jose_z2609/" target="_blank" rel="noopener noreferrer"><img
-                        src="iconos/instagram-icon.svg" class="imagen-contacto" alt="" width="20"
-                        height="20">Instagram</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>© <span id="anio">2026</span> José Zenteno. Lo empecé a mano con HTML, CSS y JavaScript y lo fui mejorando con el tiempo.</p>
-        <a href="#inicio">Volver arriba</a>
-    </footer>
-    <script src="JavaScript/index.js" defer></script>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
 </body>
-
 </html>
