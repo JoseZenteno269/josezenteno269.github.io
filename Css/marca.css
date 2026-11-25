@@ -21,6 +21,8 @@
   --ambar: #F59E0B;
   --verde: #34D399;
   --rojo: #F87171;
+  --oro: #D4A94F;
+  --oro-suave: color-mix(in srgb, #D4A94F 35%, transparent);
 
   --f-titulo: "Archivo", "Segoe UI", system-ui, sans-serif;
   --f-texto: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -185,8 +187,9 @@ a.ct img { width: 18px; height: 18px; flex: none; }
 /* ---------------------------------------------------------------- 40%: secciones en petróleo
    Se alternan con el azul noche para que la página no sea de un solo color. */
 /* un poco translúcidas para que el código del fondo se siga viendo al bajar */
-#problemas, #caso, #proceso, .footer__cierre { background: color-mix(in srgb, var(--petroleo) 86%, transparent); }
-:is(#problemas, #caso, #proceso) :is(.problema, .servicio, .garantia, .caso__paso) { background: var(--superficie-2); }
+#problemas, #caso, #proceso, .footer__cierre { background: color-mix(in srgb, var(--petroleo) 70%, transparent); }
+@media (max-width: 767px) { #problemas, #caso, #proceso, .footer__cierre { background: color-mix(in srgb, var(--petroleo) 55%, transparent); } }
+:is(#problemas, #caso, #proceso) :is(.problema, .servicio, .garantia, .caso__paso) { background: color-mix(in srgb, var(--superficie-2) 62%, transparent); }
 
 @media (prefers-reduced-motion: reduce) {
   .btn, .btn:hover { transition: none; transform: none; }

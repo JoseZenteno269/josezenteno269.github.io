@@ -370,7 +370,7 @@ import * as THREE from 'three';
   // Fuera del hero el fondo sigue visible pero más tenue (la transición la pone el CSS).
   function atenuarFondo() {
     if (!hero) return;
-    var o = window.scrollY > heroAlto * 0.8 ? '0.6' : '1';
+    var o = window.scrollY > heroAlto * 0.8 ? '0.85' : '1';
     if (o !== opacidadFondo) { opacidadFondo = o; canvas.style.opacity = o; }
   }
 
