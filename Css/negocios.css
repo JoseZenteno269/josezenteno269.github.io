@@ -116,7 +116,7 @@
 .carrusel__slide img.carrusel__img--contain { object-fit: contain; background: var(--fondo); }
 .carrusel__slide figcaption { font-size: 0.875rem; color: var(--texto-suave); }
 .carrusel__btn {
-  position: absolute; top: 38%; z-index: 2; transform: translateY(-50%);
+  position: absolute; top: auto; bottom: 44px; z-index: 2; transform: none;
   width: 44px; height: 44px; border-radius: var(--radio, 6px); padding: 0;
   display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
   background: color-mix(in srgb, var(--fondo) 85%, transparent); color: var(--texto);
@@ -129,6 +129,7 @@
 
 .caso__pasos { display: grid; grid-template-columns: 1fr; gap: var(--gap); counter-reset: paso; }
 .caso__paso { counter-increment: paso; display: grid; gap: 8px; align-content: start; }
+.caso__paso { padding: 14px 16px; border-radius: var(--radio, 6px); }
 .caso__paso::before {
   content: counter(paso, decimal-leading-zero);
   font-family: var(--f-mono); font-size: 0.9375rem; line-height: 1; color: var(--azul, #5B8DEF);
@@ -279,3 +280,5 @@
   .fondo-codigo { transition: none; }
   .problema:hover, .problema:focus-visible, .servicio:hover, .garantia:hover, .opcion:hover { transform: none; }
 }
+
+@media (max-height: 500px) and (orientation: landscape) { .hero { min-height: auto; padding-block: 28px; } }

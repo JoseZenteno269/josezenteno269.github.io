@@ -110,6 +110,12 @@ button, input { font: inherit; color: inherit; }
 .nav__toggle { flex-shrink: 0; }
 .nav__toggle:hover { border-color: var(--acento); color: var(--acento); }
 @media (max-width: 419px) { .nav__cta { display: none; } .nav__toggle { margin-left: auto; } }
+/* celular y tablet: logo a la izquierda; CV y ☰ juntos a la derecha (en index el CV va dentro de .nav__acciones) */
+@media (max-width: 1179px) {
+  .nav__acciones { display: contents; }
+  .nav__cta { order: 1; margin-left: auto; }
+  .nav__toggle { order: 2; }
+}
 
 .nav__menu.is-open .nav__links {
   display: flex; flex-direction: column;
@@ -140,6 +146,7 @@ button, input { font: inherit; color: inherit; }
   }
   .nav__link { min-height: 44px; padding-inline: 12px; font-size: 0.95rem; border: 0; border-radius: var(--radio); }
   .nav__cta { order: 0; margin-left: 0; }
+  .nav__acciones { display: flex; align-items: center; gap: 12px; }
 }
 
 /* ---------------------------------------------------------------- footer */

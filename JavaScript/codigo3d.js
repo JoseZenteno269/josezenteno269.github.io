@@ -157,6 +157,7 @@ import * as THREE from 'three';
   var camZ = 0, derivaZ = 0, mx = 0, my = 0, tmx = 0, tmy = 0;
   var heroAlto = 0, opacidadFondo = '1';
   var frames = 0, quitado = false, escribiendo = 0, contLeng = 0, estaticoPendiente = false;
+  var heroVisible = true;
   var SPAN = 140;          // largo del volumen visible (se envuelve)
   var TUNEL = 600;         // recorrido total de la cámara
   var RANGO_TIPEO = 50;    // distancia a la que empieza a escribirse
@@ -353,6 +354,7 @@ import * as THREE from 'three';
     renderizar();
     if (hero) hero.classList.add('hero--3d');
     actualizarLoop();
+    if (hero && canvas.dataset.modo === 'hero') { new IntersectionObserver(function (e) { heroVisible = e[0].isIntersecting; actualizarLoop(); }).observe(hero); }
   }
 
   function medir() {
@@ -380,7 +382,7 @@ import * as THREE from 'three';
   function objetivoZ() { return -progresoScroll() * TUNEL - derivaZ; }
 
   function actualizarLoop() {
-    var debe = !document.hidden && !quitado;
+    var debe = !document.hidden && !quitado && heroVisible;
     if (debe && !corriendo) {
       corriendo = true;
       ultimo = performance.now();

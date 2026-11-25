@@ -229,3 +229,19 @@
 .estado__punto::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--verde); animation: estado-latido 2.4s ease-out infinite; }
 @keyframes estado-latido { 0% { transform: scale(1); opacity: .5; } 100% { transform: scale(2.4); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .estado::before, .estado__punto::after { animation: none; } .estado::before { display: none; } }
+/* chips "en práctica": que nunca se salgan del renglón ni de la tarjeta */
+.tec li:has(.chip--practica) { grid-column: 1 / -1; flex-wrap: wrap; }
+.chip--practica { white-space: nowrap; }
+/* capturas de ZUNOX: mostrar desde arriba a la izquierda, sin cortar títulos */
+.zunox__captura img, .mini__img { object-position: left top; }
+/* celular en horizontal: hero más compacto para que entren los botones */
+@media (max-height: 500px) and (orientation: landscape) { .hero { min-height: auto; padding-block: 28px; } }
+/* "Quién soy": la foto se adapta al ancho y se centra cuando va arriba del texto */
+.quien__foto { width: clamp(200px, 62vw, 300px); max-width: 100%; justify-self: center; }
+@media (min-width: 720px) {
+  .quien { grid-template-columns: minmax(200px, 30%) minmax(0, 1fr); align-items: center; }
+  .quien__foto { width: 100%; max-width: 320px; justify-self: center; }
+}
+@media (min-width: 1024px) {
+  .quien { grid-template-columns: minmax(0, 320px) minmax(0, 1fr); }
+}
