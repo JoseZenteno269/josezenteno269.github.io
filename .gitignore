@@ -1,2 +1,37 @@
-# Capturas y chequeos locales de la skill de diseño (no se suben)
+# Archivos que no se suben al repo del portafolio
+
+# Capturas, chequeos y configuración local de las skills de diseño
 .taste-skill/
+.impeccable/
+.hallmark/
+DESIGN.md
+PRODUCT.md
+shots/
+
+# Capturas y registros de Playwright / herramientas de prueba
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# Dependencias y builds (por si algún día se agrega npm)
+node_modules/
+dist/
+.vercel/
+
+# Python (servidor local, scripts sueltos)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sistema operativo y editores
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*.tmp
+*.log
+
+# Variables de entorno y secretos
+.env
+.env.*

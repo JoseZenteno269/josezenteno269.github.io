@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>José Zenteno: webs y sistemas para tu negocio</title>
+<meta name="description" content="Te armo la web o el sistema que tu negocio necesita. Soy José Zenteno, programador de Pilar. Contame qué necesitás y te respondo yo.">
+<meta name="author" content="José Luis Zenteno Murillo">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="José Zenteno">
+<meta property="og:title" content="José Zenteno: webs y sistemas para tu negocio">
+<meta property="og:description" content="Dejá el cuaderno, el Excel y el WhatsApp explotado. Web o sistema a medida para tu negocio.">
+<meta property="og:url" content="https://josezenteno.dev/negocios.html">
+<meta property="og:image" content="https://josezenteno.dev/Imagenes/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://josezenteno.dev/negocios.html">
+<meta name="theme-color" content="#0A0F1C">
+<link rel="icon" href="iconos/Logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" href="Fuentes/AsusRog-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="Css/marca.css">
+<link rel="stylesheet" href="Css/negocios.css">
+<style>
+  @font-face { font-family: "ROG Fonts"; src: url("Fuentes/AsusRog-Regular.ttf") format("truetype"); font-display: swap; }
+  .tilde { position: relative; display: inline-block; line-height: 1; }
+  .tilde::after { content: ""; position: absolute; left: 38%; top: -0.02em; width: .26em; height: .1em; background: currentColor; transform: skewX(-40deg); border-radius: 2px; }
+</style>
+</head>
+<body>
+<canvas id="codigo3d" class="fondo-codigo" data-modo="pagina" aria-hidden="true"></canvas>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="contenedor nav__barra">
+    <a class="nav__logo marca" href="index.html" aria-label="José Zenteno, ir al portafolio"><span aria-hidden="true">Jos<span class="tilde">e</span> Zenteno</span></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav__menu" id="menu">
+      <nav class="nav__links" aria-label="Principal">
+        <a class="nav__link" href="#problemas">Problemas</a>
+        <a class="nav__link" href="#servicios">Cómo ayudo</a>
+        <a class="nav__link" href="#caso">Proyecto en uso</a>
+        <a class="nav__link" href="#proceso">Cómo trabajo</a>
+        <a class="nav__link" href="#faq">Preguntas</a>
+        <a class="nav__link nav__link--portafolio" href="index.html">Portafolio</a>
+      </nav>
+      <a class="btn btn--primario nav__cta" href="#cotizar">Cotizá</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+    <div class="hero__fallback" aria-hidden="true">
+      <pre>app.MapPost("/pedidos", async (Pedido p, Db db) =&gt; {
+    await db.GuardarAsync(p);
+    return Results.Created($"/pedidos/{p.Id}", p);
+});
+
+SELECT c.Nombre, p.Estado
+FROM Pedidos p JOIN Clientes c ON c.Id = p.ClienteId
+WHERE p.Estado = 'En preparación';
+
+@GetMapping("/productos")
+public List&lt;Producto&gt; listar() { return repo.findAll(); }</pre>
+    </div>
+    <div class="contenedor hero__contenido">
+      <p class="hero__kicker">Soy José Zenteno, programador de Pilar</p>
+      <h1 class="hero__titulo" id="hero-titulo">Webs y sistemas a medida para tu negocio</h1>
+      <p class="hero__bajada">Te ayudo a dejar el cuaderno, el Excel y el WhatsApp explotado. Antes de empezar te paso una propuesta clara, sin sorpresas.</p>
+      <div class="hero__acciones">
+        <a class="btn btn--primario" href="#cotizar">Cotizá tu proyecto</a>
+        <a class="btn btn--secundario" href="#caso">Ver proyecto</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="problemas" aria-labelledby="problemas-titulo">
+    <div class="contenedor">
+      <header class="seccion__cabecera">
+        <h2 class="seccion__titulo" id="problemas-titulo">¿Te pasa esto?</h2>
+        <p class="seccion__bajada">Casi nunca faltan clientes: lo que se pierde es tiempo y ventas en el día a día. Tocá la que más se parezca a tu caso.</p>
+      </header>
+      <ul class="problemas">
+        <li>
+          <button type="button" class="problema" data-solucion="sistema">
+            <span class="problema__titulo">Todo en papel o en un cuaderno</span>
+            <span class="problema__texto">Un pedido se pierde, una seña no se anota y nadie sabe bien qué se debe.</span>
+            <span class="problema__solucion"><strong>Se resuelve con:</strong> un sistema simple para cargar pedidos y clientes.</span>
+            <span class="problema__accion">Cotizalo <svg class="btn__flecha" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M1 6h8M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="problema" data-solucion="catalogo">
+            <span class="problema__titulo">El WhatsApp explota</span>
+            <span class="problema__texto">Consultas, pedidos y reclamos mezclados en el mismo chat. Algo siempre queda sin responder.</span>
+            <span class="problema__solucion"><strong>Se resuelve con:</strong> un catálogo o formulario que ordena las consultas antes de que lleguen.</span>
+            <span class="problema__accion">Cotizalo <svg class="btn__flecha" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M1 6h8M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="problema" data-solucion="sistema">
+            <span class="problema__titulo">«¿Y mi pedido cómo va?»</span>
+            <span class="problema__texto">Respondés la misma pregunta diez veces por día en vez de trabajar.</span>
+            <span class="problema__solucion"><strong>Se resuelve con:</strong> un link de seguimiento donde el cliente ve en qué estado está su pedido.</span>
+            <span class="problema__accion">Cotizalo <svg class="btn__flecha" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M1 6h8M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="problema" data-solucion="web">
+            <span class="problema__titulo">No tenés web, o nadie la encuentra</span>
+            <span class="problema__texto">Si alguien te busca en Google y no aparecés, le compra a otro.</span>
+            <span class="problema__solucion"><strong>Se resuelve con:</strong> una web propia que muestre lo que hacés y reciba consultas.</span>
+            <span class="problema__accion">Cotizalo <svg class="btn__flecha" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M1 6h8M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="servicios" aria-labelledby="servicios-titulo">
+    <div class="contenedor">
+      <header class="seccion__cabecera">
+        <h2 class="seccion__titulo" id="servicios-titulo">Cómo te puedo ayudar</h2>
+        <p class="seccion__bajada">Seis cosas que hago. El plazo y el precio te los paso por escrito, en la propuesta.</p>
+      </header>
+      <ul class="servicios">
+        <li>
+          <article class="servicio">
+            <h3 class="servicio__titulo">Web para tu negocio</h3>
+            <p class="servicio__texto">Tu web propia, que muestre lo que hacés y reciba consultas.</p>
+            <p class="servicio__ideal"><strong>Ideal si:</strong> hoy nadie te encuentra en Google.</p>
+          </article>
+        </li>
+        <li>
+          <article class="servicio">
+            <h3 class="servicio__titulo">Catálogo online</h3>
+            <p class="servicio__texto">Tus productos ordenados por categoría, listos para compartir por link.</p>
+            <p class="servicio__ideal"><strong>Ideal si:</strong> mandás fotos y precios por WhatsApp todo el día.</p>
+          </article>
+        </li>
+        <li>
+          <article class="servicio">
+            <h3 class="servicio__titulo">Sistema de pedidos o turnos</h3>
+            <p class="servicio__texto">Un panel para cargar y seguir pedidos o turnos, con mails automáticos.</p>
+            <p class="servicio__ideal"><strong>Ideal si:</strong> llevás todo en papel o en un Excel que ya no da más.</p>
+          </article>
+        </li>
+        <li>
+          <article class="servicio">
+            <h3 class="servicio__titulo">Administración de clientes</h3>
+            <p class="servicio__texto">Clientes, pedidos y estados en un solo lugar, con link de seguimiento.</p>
+            <p class="servicio__ideal"><strong>Ideal si:</strong> te preguntan seguido en qué quedó cada cosa.</p>
+          </article>
+        </li>
+        <li>
+          <article class="servicio">
+            <h3 class="servicio__titulo">App Android simple</h3>
+            <p class="servicio__texto">Una app hecha solo para tu negocio, que se instala en los celulares de tu equipo.</p>
+            <p class="servicio__ideal"><strong>Ideal si:</strong> tu equipo trabaja en la calle y necesita el celular.</p>
+          </article>
+        </li>
+        <li>
+          <article class="servicio">
+            <h3 class="servicio__titulo">Base de datos o algo a medida</h3>
+            <p class="servicio__texto">Tu información ordenada y fácil de consultar, en vez de diez planillas sueltas.</p>
+            <p class="servicio__ideal"><strong>Ideal si:</strong> tenés un problema y no sabés si se resuelve con software.</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="caso" aria-labelledby="caso-titulo">
+    <div class="contenedor">
+      <header class="seccion__cabecera">
+        <h2 class="seccion__titulo" id="caso-titulo">Proyecto en uso: ZUNOX 3D</h2>
+        <p class="seccion__bajada"><span class="badge badge--produccion"><span class="badge__punto" aria-hidden="true"></span>En producción</span> Un negocio real de impresión 3D lo usa. Lo hicimos entre tres, como TechIntoBios.</p>
+      </header>
+      <div class="caso">
+        <div class="carrusel" data-carrusel role="group" aria-roledescription="carrusel" aria-label="Capturas de ZUNOX 3D">
+          <div class="carrusel__pista">
+          <figure class="carrusel__slide">
+            <img src="Imagenes/web/zunox-inicio.webp" alt="Inicio de ZUNOX 3D con el botón para ver el catálogo" width="1400" height="871">
+            <figcaption>Inicio del sitio.</figcaption>
+          </figure>
+          <figure class="carrusel__slide">
+            <img src="Imagenes/web/zunox-catalogo.webp" alt="Catálogo de ZUNOX 3D con los productos por categoría" width="1200" height="707" loading="lazy">
+            <figcaption>Catálogo por categorías.</figcaption>
+          </figure>
+          <figure class="carrusel__slide">
+            <img src="Imagenes/web/zunox-panel-pedido.webp" alt="Panel para cargar un pedido nuevo con los datos del cliente" width="1200" height="645" loading="lazy">
+            <figcaption>Panel para cargar un pedido.</figcaption>
+          </figure>
+          <figure class="carrusel__slide">
+            <img src="Imagenes/web/zunox-seguimiento-cliente.webp" class="carrusel__img--contain" alt="Pantalla de seguimiento donde el cliente ve el estado de su pedido" width="1000" height="430" loading="lazy">
+            <figcaption>Lo que ve el cliente: en qué estado está su pedido.</figcaption>
+          </figure>
+          <figure class="carrusel__slide">
+            <img src="Imagenes/web/zunox-mail.webp" alt="Mail automático que recibe el cliente cuando cambia el estado" width="1000" height="531" loading="lazy">
+            <figcaption>Mail automático cuando cambia el estado.</figcaption>
+          </figure>
+          </div>
+          <button type="button" class="carrusel__btn carrusel__btn--prev" data-carrusel-prev aria-label="Captura anterior"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="carrusel__btn carrusel__btn--next" data-carrusel-next aria-label="Captura siguiente"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <ol class="caso__pasos">
+          <li class="caso__paso">
+            <h3 class="caso__titulo">Para el dueño</h3>
+            <p>Carga clientes y pedidos, maneja el catálogo y cambia el estado de cada pedido.</p>
+          </li>
+          <li class="caso__paso">
+            <h3 class="caso__titulo">Para el cliente</h3>
+            <p>Ve el catálogo, consulta por WhatsApp y sigue su pedido con un link propio. Le llega un mail automático cuando cambia el estado.</p>
+          </li>
+          <li class="caso__paso">
+            <h3 class="caso__titulo">Por dentro</h3>
+            <p>API en C# con .NET 10, PostgreSQL, sesión con JWT, mails con Resend y deploy con Docker en Render.</p>
+          </li>
+        </ol>
+        <p class="caso__enlace"><a class="btn btn--secundario" href="https://zunox3d.com.ar" target="_blank" rel="noopener noreferrer">Visitar zunox3d.com.ar</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--cotizar" id="cotizar" aria-labelledby="cotizar-titulo">
+    <div class="contenedor">
+      <header class="seccion__cabecera">
+        <h2 class="seccion__titulo" id="cotizar-titulo">Cotizá tu proyecto</h2>
+        <p class="seccion__bajada">Cuatro preguntas, solo tocando opciones. Al final ves qué te recomiendo y me mandás el resumen por WhatsApp o por mail. Sin compromiso.</p>
+      </header>
+      <form id="cotizador" class="cotizador" novalidate>
+        <div class="cotizador__cabecera solo-js">
+          <p class="cotizador__paso-texto" aria-live="polite">Paso <span data-paso-actual>1</span> de 4</p>
+          <div class="cotizador__progreso" role="progressbar" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1" aria-label="Progreso de la cotización"><span class="cotizador__barra"></span></div>
+        </div>
+        <fieldset class="paso" data-paso="1">
+          <legend tabindex="-1">¿Qué necesitás?</legend>
+          <div class="opciones">
+            <label class="opcion"><input type="radio" name="necesidad" value="web"><span class="opcion__texto">Una web para mostrar mi negocio</span></label>
+            <label class="opcion"><input type="radio" name="necesidad" value="catalogo"><span class="opcion__texto">Un catálogo online</span></label>
+            <label class="opcion"><input type="radio" name="necesidad" value="sistema"><span class="opcion__texto">Un sistema de pedidos o turnos</span></label>
+            <label class="opcion"><input type="radio" name="necesidad" value="clientes"><span class="opcion__texto">Administrar clientes</span></label>
+            <label class="opcion"><input type="radio" name="necesidad" value="app"><span class="opcion__texto">Una app Android simple</span></label>
+            <label class="opcion"><input type="radio" name="necesidad" value="otra"><span class="opcion__texto">Otra cosa / no sé</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="paso" data-paso="2">
+          <legend tabindex="-1">¿Qué tipo de negocio tenés?</legend>
+          <div class="opciones">
+            <label class="opcion"><input type="radio" name="rubro" value="comercio"><span class="opcion__texto">Comercio o local</span></label>
+            <label class="opcion"><input type="radio" name="rubro" value="gastronomia"><span class="opcion__texto">Gastronomía</span></label>
+            <label class="opcion"><input type="radio" name="rubro" value="servicios"><span class="opcion__texto">Servicios profesionales</span></label>
+            <label class="opcion"><input type="radio" name="rubro" value="salud"><span class="opcion__texto">Salud o estética</span></label>
+            <label class="opcion"><input type="radio" name="rubro" value="online"><span class="opcion__texto">Emprendimiento online</span></label>
+            <label class="opcion"><input type="radio" name="rubro" value="otro"><span class="opcion__texto">Otro</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="paso" data-paso="3">
+          <legend tabindex="-1">¿Qué tiene que poder hacer?</legend>
+          <p class="paso__ayuda">Podés elegir más de una.</p>
+          <div class="opciones">
+            <label class="opcion"><input type="checkbox" name="funciones" value="productos"><span class="opcion__texto">Mostrar productos o servicios</span></label>
+            <label class="opcion"><input type="checkbox" name="funciones" value="pedidos"><span class="opcion__texto">Recibir pedidos o reservas</span></label>
+            <label class="opcion"><input type="checkbox" name="funciones" value="whatsapp"><span class="opcion__texto">Botón para que tus clientes te escriban por WhatsApp</span></label>
+            <label class="opcion"><input type="checkbox" name="funciones" value="panel"><span class="opcion__texto">Panel para cargar cosas yo</span></label>
+            <label class="opcion"><input type="checkbox" name="funciones" value="mails"><span class="opcion__texto">Avisos por mail</span></label>
+            <label class="opcion"><input type="checkbox" name="funciones" value="nose"><span class="opcion__texto">No sé todavía</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="paso" data-paso="4">
+          <legend tabindex="-1">¿Para cuándo lo necesitás?</legend>
+          <div class="opciones">
+            <label class="opcion"><input type="radio" name="plazo" value="antes"><span class="opcion__texto">Lo antes posible</span></label>
+            <label class="opcion"><input type="radio" name="plazo" value="meses"><span class="opcion__texto">En 1 o 2 meses</span></label>
+            <label class="opcion"><input type="radio" name="plazo" value="sinapuro"><span class="opcion__texto">Sin apuro, estoy averiguando</span></label>
+          </div>
+        </fieldset>
+        <p class="cotizador__error" data-error role="alert" hidden></p>
+        <div class="cotizador__nav solo-js">
+          <button type="button" class="btn btn--secundario" data-atras hidden>Atrás</button>
+          <button type="button" class="btn btn--primario" data-siguiente hidden>Siguiente</button>
+        </div>
+        <noscript><p class="cotizador__nojs">Sin JavaScript no puedo armar el resumen. Escribime directo por <a href="https://wa.me/5491124080590" rel="noopener noreferrer">WhatsApp</a> o por <a href="mailto:zentenojose123456@gmail.com">mail</a>.</p></noscript>
+        <section class="resultado" id="resultado" hidden aria-labelledby="resultado-titulo">
+          <h3 class="resultado__titulo" id="resultado-titulo" tabindex="-1">Listo. Esto es lo que me vas a mandar:</h3>
+          <ul class="resultado__resumen" data-res-resumen></ul>
+          <div class="resultado__reco">
+            <h4 class="resultado__etiqueta">Lo que te recomiendo</h4>
+            <p class="resultado__reco-titulo" data-res-reco-titulo></p>
+            <p data-res-reco-texto></p>
+            <p class="resultado__nota">El plazo y el precio te los paso por escrito cuando lo charlemos.</p>
+          </div>
+          <div class="resultado__acciones">
+            <a class="btn btn--primario" data-res-whatsapp href="https://wa.me/5491124080590" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
+            <a class="btn btn--secundario" data-res-mail href="mailto:zentenojose123456@gmail.com?subject=Consulta%20desde%20la%20web">Prefiero por mail</a>
+            <button type="button" class="btn btn--texto" data-reiniciar>Empezar de nuevo</button>
+          </div>
+        </section>
+      </form>
+    </div>
+  </section>
+
+  <section class="seccion" id="proceso" aria-labelledby="proceso-titulo">
+    <div class="contenedor">
+      <header class="seccion__cabecera">
+        <h2 class="seccion__titulo" id="proceso-titulo">Cómo trabajo</h2>
+        <p class="seccion__bajada">Cuatro pasos, sin sorpresas.</p>
+      </header>
+      <ol class="proceso">
+        <li class="proceso__paso">
+          <h3 class="proceso__titulo">Charlamos</h3>
+          <p>Me contás cómo trabajás hoy y qué te frena. Es gratis.</p>
+        </li>
+        <li class="proceso__paso">
+          <h3 class="proceso__titulo">Te paso una propuesta</h3>
+          <p>Qué incluye, cuánto sale y cuándo lo tenés, según lo que necesitás. Te saco todas las dudas antes de arrancar.</p>
+        </li>
+        <li class="proceso__paso">
+          <h3 class="proceso__titulo">Avances cada semana</h3>
+          <p>Vas viendo y probando lo que hago, no esperás al final.</p>
+        </li>
+        <li class="proceso__paso">
+          <h3 class="proceso__titulo">Entrega y soporte</h3>
+          <p>Lo dejo funcionando, te enseño a usarlo y sigo cerca por si algo falla.</p>
+        </li>
+      </ol>
+      <ul class="garantias">
+        <li class="garantia"><h3 class="garantia__titulo">El precio según lo que necesitás</h3><p>Cada negocio pide algo distinto. Lo charlamos, vemos qué te hace falta y te paso cuánto sale antes de empezar.</p></li>
+        <li class="garantia"><h3 class="garantia__titulo">El dominio es tuyo</h3><p>La dirección de tu página queda a tu nombre. Cuando está por terminarse, te ayudo a sacarla y configurarla.</p></li>
+        <li class="garantia"><h3 class="garantia__titulo">Todo se habla antes</h3><p>Precio, pagos y plazos los vemos en la charla. Te respondo todas las dudas para que arranques tranquilo.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="quien" aria-labelledby="quien-titulo">
+    <div class="contenedor quien">
+      <div class="quien__texto">
+        <h2 class="seccion__titulo" id="quien-titulo">Quién soy</h2>
+        <p>Soy José Zenteno, de Pilar. Soy técnico electromecánico, me pasé a la programación y hoy estudio la Tecnicatura en Programación en la UTN FRGP.</p>
+        <p>Hoy programo backend con C#, .NET y Java. Hablás directo conmigo, sin intermediarios.</p>
+        <p><a class="btn btn--secundario" href="index.html">Ver mi portafolio</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="faq" aria-labelledby="faq-titulo">
+    <div class="contenedor">
+      <header class="seccion__cabecera">
+        <h2 class="seccion__titulo" id="faq-titulo">Preguntas frecuentes</h2>
+      </header>
+      <div class="faq">
+      <details class="faq__item">
+        <summary>¿Cuánto sale?</summary>
+        <p>Depende de lo que necesites y de qué tan grande sea. Lo charlamos y antes de empezar te paso cuánto sale.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Cuánto tarda?</summary>
+        <p>Depende de lo que pidas. Siempre busco entregártelo lo antes posible, y antes de empezar te digo un plazo para lo tuyo.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Qué necesito para empezar?</summary>
+        <p>Contarme cómo trabajás hoy. Si tenés logo, fotos o textos, mejor; si no, lo vemos juntos.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Y el dominio y el hosting?</summary>
+        <p>El dominio es tuyo y queda a tu nombre. Cuando la página está por terminarse, te ayudo a elegirlo y configurarlo.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Qué pasa si algo falla?</summary>
+        <p>Después de la entrega sigo cerca. Si algo no anda como acordamos, lo arreglo. Si querés cambios nuevos, los charlamos aparte.</p>
+      </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contacto" aria-labelledby="contacto-titulo">
+  <div class="contenedor">
+    <div class="footer__cierre">
+      <h2 class="footer__titulo" id="contacto-titulo">Contame qué necesitás</h2>
+      <p>Escribime y te respondo yo, sin vueltas.</p>
+      <div class="footer__acciones">
+        <a class="btn btn--primario" href="https://wa.me/5491124080590?text=Hola%20Jos%C3%A9%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener noreferrer">Escribime por WhatsApp</a>
+        <a class="btn btn--secundario" href="mailto:zentenojose123456@gmail.com">Mandame un mail</a>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a class="nav__logo marca" href="index.html" aria-label="José Zenteno, ir al portafolio"><span aria-hidden="true">Jos<span class="tilde">e</span> Zenteno</span></a>
+      <ul class="footer__lista">
+        <li><a class="ct" href="index.html">Portafolio</a></li>
+        <li><a class="ct" href="https://github.com/JoseZenteno269" target="_blank" rel="noopener noreferrer"><img src="iconos/github_dark.svg" alt="" width="18" height="18">GitHub</a></li>
+        <li><a class="ct" href="https://www.linkedin.com/in/jose-zenteno-357813235/" target="_blank" rel="noopener noreferrer"><img src="iconos/linkedin.svg" alt="" width="18" height="18">LinkedIn</a></li>
+        <li><a class="ct" href="mailto:zentenojose123456@gmail.com"><img src="iconos/gmail.svg" alt="" width="18" height="18">Mail</a></li>
+      </ul>
+    </div>
+    <p class="footer__legal">&copy; 2026 José Zenteno</p>
+  </div>
+</footer>
+
+<script src="JavaScript/nav.js" defer></script>
+<script src="JavaScript/cotizador.js" defer></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module" src="JavaScript/codigo3d.js"></script>
+</body>
+</html>
